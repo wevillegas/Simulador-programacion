@@ -47,9 +47,36 @@ public class SimuladorProgramacion {
         
         // Animales Terrestres (ejemplos solamente, despues se pueden borrar)
         AnimalesTerrestres leon = new AnimalesTerrestres("Panthera leo", "mamifero", "leon africano", "carnivoro", "amarillo", 200);
-        //agrego los terrestres al arraylist
+        AnimalesTerrestres oso_panda = new AnimalesTerrestres("Ailuropoda melanoleuca", "mamifero","pardo", "bambu","blanco y negro", 1);
+        AnimalesTerrestres lince = new AnimalesTerrestres("Lynx spp","mamifero","lynx","carnivoro","manchas y rayas", 70);
+        AnimalesTerrestres chimpance = new AnimalesTerrestres("primate", "Pan troglodytes","", "omnivoro","negro",63);
+        AnimalesTerrestres guepardo = new AnimalesTerrestres("mamifero","Acinonyx jubatus","","carnivoro","amarillo",1);
+        AnimalesTerrestres puma = new AnimalesTerrestres("mamifero","Puma concolor","","carnivoro","marron",1);
+        AnimalesTerrestres tapir = new AnimalesTerrestres("mamifero","Tapirus terrestris","","herbivoros","gris",1);
+        AnimalesTerrestres marmota = new AnimalesTerrestres("roedor","Marmota","","herbivoro","marron",40);
+        AnimalesTerrestres suricata = new AnimalesTerrestres("mamifero","Suricata suricatta","","carnivoro","marron",25);
+        AnimalesTerrestres coyote = new AnimalesTerrestres("mamifero","Canis latrans","","omnivoro","gris",90);
+        AnimalesTerrestres castor = new AnimalesTerrestres("roedor","Castor","","hebvivoro","marron",74);
+        AnimalesTerrestres zorro = new AnimalesTerrestres("mamifero","Vulpes vulpes","","omnivoro","rojizo",45);
+        AnimalesTerrestres koala = new AnimalesTerrestres("marsupial","Phascolarctos cinereus","","herbivoros","gris",60);
+        AnimalesTerrestres lobo = new AnimalesTerrestres("mamifero","Canis lupus","","carnivoros","gris",1);
+        AnimalesTerrestres jirafa = new AnimalesTerrestres("mamifero","Giraffa camelopardalis","","herbivoro","amarillo",4);
+    //agrego los terrestres al arraylist
         Tierra.add(leon);
-        
+        Tierra.add(oso_panda);
+        Tierra.add(lince);
+        Tierra.add(chimpance);
+        Tierra.add(guepardo);
+        Tierra.add(puma);
+        Tierra.add(tapir);
+        Tierra.add(marmota);
+        Tierra.add(suricata);
+        Tierra.add(coyote);
+        Tierra.add(castor);
+        Tierra.add(zorro);
+        Tierra.add(koala);
+        Tierra.add(lobo);
+        Tierra.add(jirafa);
         
         // APARICION DE LOS ANIMALES DE FORMA ALEATORIA
         
