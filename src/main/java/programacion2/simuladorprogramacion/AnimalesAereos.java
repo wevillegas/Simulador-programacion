@@ -2,27 +2,27 @@ package programacion2.simuladorprogramacion;
 
 
 public class AnimalesAereos extends Animales {
-    private String tamanioAlas, tamanioPico;
+    private int tamanioAlas, tamanioPico;
 
-    public AnimalesAereos(String tamanioAlas, String tamanioPico, String especie, String raza, String alimentacion, String color, int tamanio) {
+    public AnimalesAereos(int tamanioAlas, int tamanioPico, String especie, String raza, String alimentacion, String color, int tamanio) {
         super(especie, raza, alimentacion, color, tamanio);
         this.tamanioAlas = tamanioAlas;
         this.tamanioPico = tamanioPico;
     }
 
-    public String getTamanioAlas() {
+    public int getTamanioAlas() {
         return tamanioAlas;
     }
 
-    public void setTamanioAlas(String tamanioAlas) {
+    public void setTamanioAlas(int tamanioAlas) {
         this.tamanioAlas = tamanioAlas;
     }
 
-    public String getTamanioPico() {
+    public int getTamanioPico() {
         return tamanioPico;
     }
 
-    public void setTamanioPico(String tamanioPico) {
+    public void setTamanioPico(int tamanioPico) {
         this.tamanioPico = tamanioPico;
     }
 
@@ -65,5 +65,7 @@ public class AnimalesAereos extends Animales {
     public void setTamanio(int tamanio) {
         this.tamanio = tamanio;
     }
+
+    
     
 }
