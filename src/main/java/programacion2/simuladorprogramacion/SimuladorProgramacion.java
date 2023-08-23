@@ -26,9 +26,12 @@ public class SimuladorProgramacion {
         AnimalesAcuaticos tiburonMartillo = new AnimalesAcuaticos("Branquias", "Tiburon", "Tiburon martillo", "Carnivoro", "Gris oscuro", 300);
         AnimalesAcuaticos delfin = new AnimalesAcuaticos("Pulmones", "Cetaceo", "Delfin", "Carnivoro", "Azul claro", 200);
         AnimalesAcuaticos estrellaDeMar = new AnimalesAcuaticos("Pápulas", "Asteroideos", "Estrella de mar", "Carnivoro", "Rosa", 10);
-        AnimalesAcuaticos pezPayaso = new AnimalesAcuaticos("Branquias", "Pez", "Pez payaso", "Omnivora", "Naranja y blanco", 11);
+        AnimalesAcuaticos pezPayaso = new AnimalesAcuaticos("Branquias", "Pez", "Pez payaso", "Omnivoro", "Naranja y blanco", 11);
         AnimalesAcuaticos calamar = new AnimalesAcuaticos("Branquias", "Molusco", "Calamar", "Carnivoro", "Rosa", 11);
-        AnimalesAcuaticos beluga = new AnimalesAcuaticos("Pulmones", "Ballena", "Beluga", "Carnivora", "Blanco", 420);
+        AnimalesAcuaticos beluga = new AnimalesAcuaticos("Pulmones", "Ballena", "Beluga", "Carnivoro", "Blanco", 420);
+        AnimalesAcuaticos loboMarino = new AnimalesAcuaticos("Pulmones", "Mamifero", "Lobo marino", "Carnivoro", "Negro", 210);
+        AnimalesAcuaticos nutria = new AnimalesAcuaticos("Pulmones", "Roedor", "Nutria", "Carnivoro", "Marron oscuro", 70);
+        
         // agrego los acuaticos al arraylist
         Agua.add(mantarraya);
         Agua.add(pezGlobo);
@@ -38,32 +41,52 @@ public class SimuladorProgramacion {
         Agua.add(pezPayaso);
         Agua.add(calamar);
         Agua.add(beluga);
+        Agua.add(loboMarino);
+        Agua.add(nutria);
 
         // Animales Aereos (ejemplos solamente, despues se pueden borrar)
-        AnimalesAereos pajaro = new AnimalesAereos(10, 10, "ave", "pajarraco", "omnivoro", "marron", 10);
+        AnimalesAereos cardenal = new AnimalesAereos(25, 2, "Ave", "Cardenal", "Omnivoro", "Rojo", 22);
+        AnimalesAereos paloma = new AnimalesAereos(28,3, "Ave","Paloma","Omnivoro","Azul grisaseo",27 );
+        AnimalesAereos condor = new AnimalesAereos(300,10,"Ave","Condor","Caroñero","Blaco negro",130);
+        AnimalesAereos tucan = new AnimalesAereos(70,20, "Ave","Tucan","Omnivora","Negro",65);
+        AnimalesAereos buho = new AnimalesAereos(70,4, "Ave","Buho","Rapiñas","Marron",62 );
+        AnimalesAereos aguila = new AnimalesAereos(100,8, "Ave","Aguila","Carnivoro","Blanco y marron",80);
+        AnimalesAereos loro = new AnimalesAereos(40,5, "Ave","Loro","Omnivoro","Verde",35);
+        AnimalesAereos colibri = new AnimalesAereos(10,3, "Ave","Colibri","Nectar","Morado",7);
+        AnimalesAereos cacatua = new AnimalesAereos(70,6, "Ave","Cacatua","Omnivoro","Blanco",60);
+        AnimalesAereos canario = new AnimalesAereos(10,2, "Ave","Canario","Omnivoro","Amarillo",11 );
         // agrego los aereos al arraylist
-        Aire.add(pajaro);
+        Aire.add(cardenal);
+        Aire.add(paloma);
+        Aire.add(condor);
+        Aire.add(tucan);
+        Aire.add(buho);
+        Aire.add(aguila);
+        Aire.add(loro);
+        Aire.add(colibri);
+        Aire.add(cacatua);
+        Aire.add(canario);
         
         
         // Animales Terrestres (ejemplos solamente, despues se pueden borrar)
-        AnimalesTerrestres leon = new AnimalesTerrestres("Panthera leo", "mamifero", "leon africano", "carnivoro", "amarillo", 200);
-        AnimalesTerrestres oso_panda = new AnimalesTerrestres("Ailuropoda melanoleuca", "mamifero","pardo", "bambu","blanco y negro", 1);
-        AnimalesTerrestres lince = new AnimalesTerrestres("Lynx spp","mamifero","lynx","carnivoro","manchas y rayas", 70);
-        AnimalesTerrestres chimpance = new AnimalesTerrestres("primate", "Pan troglodytes","", "omnivoro","negro",63);
-        AnimalesTerrestres guepardo = new AnimalesTerrestres("mamifero","Acinonyx jubatus","","carnivoro","amarillo",1);
-        AnimalesTerrestres puma = new AnimalesTerrestres("mamifero","Puma concolor","","carnivoro","marron",1);
-        AnimalesTerrestres tapir = new AnimalesTerrestres("mamifero","Tapirus terrestris","","herbivoros","gris",1);
-        AnimalesTerrestres marmota = new AnimalesTerrestres("roedor","Marmota","","herbivoro","marron",40);
-        AnimalesTerrestres suricata = new AnimalesTerrestres("mamifero","Suricata suricatta","","carnivoro","marron",25);
-        AnimalesTerrestres coyote = new AnimalesTerrestres("mamifero","Canis latrans","","omnivoro","gris",90);
-        AnimalesTerrestres castor = new AnimalesTerrestres("roedor","Castor","","hebvivoro","marron",74);
-        AnimalesTerrestres zorro = new AnimalesTerrestres("mamifero","Vulpes vulpes","","omnivoro","rojizo",45);
-        AnimalesTerrestres koala = new AnimalesTerrestres("marsupial","Phascolarctos cinereus","","herbivoros","gris",60);
-        AnimalesTerrestres lobo = new AnimalesTerrestres("mamifero","Canis lupus","","carnivoros","gris",1);
-        AnimalesTerrestres jirafa = new AnimalesTerrestres("mamifero","Giraffa camelopardalis","","herbivoro","amarillo",4);
-    //agrego los terrestres al arraylist
+        AnimalesTerrestres leon = new AnimalesTerrestres("Panthera leo", "Mamifero", "Leon", "Carnivoro", "Amarillo", 200);
+        AnimalesTerrestres oso = new AnimalesTerrestres("Ailuropoda melanoleuca", "Mamifero","Oso", "Omnivoro","Blanco y negro", 200);
+        AnimalesTerrestres lince = new AnimalesTerrestres("Lynx spp","  Mamifero","Lince","Carnivoro","Manchas y rayas", 120);
+        AnimalesTerrestres chimpance = new AnimalesTerrestres("Primate", "Pan troglodytes","Chimpancé", "Omnivoro","Negro",63);
+        AnimalesTerrestres guepardo = new AnimalesTerrestres("Mamifero","Acinonyx jubatus","Guepardo","Carnivoro","Amarillo",130);
+        AnimalesTerrestres puma = new AnimalesTerrestres("Mamifero","Felino","Puma","Carnivoro","Marron",230);
+        AnimalesTerrestres tapir = new AnimalesTerrestres("Mamifero","Tapirus terrestris","Tapir","Herbivoro","Gris",200);
+        AnimalesTerrestres marmota = new AnimalesTerrestres("Roedor","Sciuridae","Marmota","Herbivoro","Marron",54);
+        AnimalesTerrestres suricata = new AnimalesTerrestres("Mamifero","Suricata suricatta","Suricata","Carnivoro","Marron",30);
+        AnimalesTerrestres coyote = new AnimalesTerrestres("Mamifero","Canis latrans","Coyote","Omnivoro","Gris",80);
+        AnimalesTerrestres castor = new AnimalesTerrestres("Roedor","Castor canadensis","Castor","Hervivoro","Marron",74);
+        AnimalesTerrestres zorro = new AnimalesTerrestres("Mamifero","Vulpes vulpes","Zorro","Omnivoro","Rojizo",45);
+        AnimalesTerrestres koala = new AnimalesTerrestres("Marsupial","Phascolarctos cinereus","Koala","Herbivoros","Gris",70);
+        AnimalesTerrestres lobo = new AnimalesTerrestres("Mamifero","Canis lupus","Lobo","Carnivoros","Gris",150);
+        AnimalesTerrestres jirafa = new AnimalesTerrestres("Mamifero","Giraffa camelopardalis","Jirafa","Herbivoro","Amarillo",420);
+        //agrego los terrestres al arraylist
         Tierra.add(leon);
-        Tierra.add(oso_panda);
+        Tierra.add(oso);
         Tierra.add(lince);
         Tierra.add(chimpance);
         Tierra.add(guepardo);
@@ -78,7 +101,7 @@ public class SimuladorProgramacion {
         Tierra.add(lobo);
         Tierra.add(jirafa);
         
-        // APARICION DE LOS ANIMALES DE FORMA ALEATORIA
+        // [APARICION DE LOS ANIMALES DE FORMA ALEATORIA]
         
         // cantidad random de animales acuaticos que apareceran
        int cantidadRandomAgua = aleatorio.nextInt(Agua.size()) + 1;
