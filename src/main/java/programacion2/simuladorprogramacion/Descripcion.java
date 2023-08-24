@@ -56,5 +56,38 @@ public class Descripcion {
         case: "jirafa":
             System.out.println("Especie: Giraffa camelopardalis, clasificacion: mamifero, raza: , alimentacion: herviboro, color: amarillo,   tamaño: 4");
             break;
+            
+            
+            //DESCRIPCION DE ANIMALES ACUATICOS
+        case: "mantarraya":
+            System.out.println("Respiracion:Branquias ,Especie:Mantarraya ,raza:Raya pinta ,alimentacion:Omnivora ,color:gris y blanco ,tamaño:120");
+            break;
+        case: "pezGlobo":
+            System.out.println("Respiracion:Branquias ,Especie:Pez ,raza:Pez globo ,alimentacion:Carnivoro ,color:Amarillo ,tamaño:30");
+            break;
+        case: "tiburonMartillo":
+            System.out.println("Respiracion:Branquias ,Especie:Tiburon ,raza:Tiburon martillo ,alimentacion:Carnivoro ,color:Gris oscuro ,tamaño:300 ");
+            break;
+        case: "delfin":
+            System.out.println("Respiracion:Pulmones ,Especie:Cetaceo ,raza:Delfin , alimentacion:Carnivoro ,color:Azul claro ,tamaño:200 ");
+            break;
+        case: "estrellaDeMar":
+            System.out.println("Respiracion:Pápulas ,Especie:Asteroideos ,raza:Estrella de mar ,alimentacion:Carnivoro ,color:Rosa ,tamaño:10 ");
+            break;
+        case: "pezPayaso":
+            System.out.println("Respiracion:Branquias ,Especie:Pez ,raza:Pez payaso ,alimentacion:Omnivoro ,color:Naranja ,tamaño:10 ");
+            break;
+        case: "calamar":
+            System.out.println("Respiracion:Branquias ,Especie:Molusco ,raza:Calamar ,alimentacion:Carnivoro ,color:Rosa ,tamaño:11 ");
+            break;
+        case: "beluga":
+            System.out.println("Respiracion:Pulmones ,Especie:Ballena ,raza:Beluga ,alimentacion:Carnivoro ,color:Blanco ,tamaño:420 ");
+            break;
+        case: "loboMarino":
+            System.out.println("Respiracion:Pulmones, Especie:Mamifero , raza:Lobo marino , alimentacion:Carnivoro, color:Negro,   tamaño: 210");
+            break;
+        case: "nutria":
+            System.out.println("Respiracion:Pulmones, Especie:Roedor, raza:Nutria , alimentacion:Carnivoro, color:Marron oscuro,   tamaño:70 ");
+            break;
     }
 }
