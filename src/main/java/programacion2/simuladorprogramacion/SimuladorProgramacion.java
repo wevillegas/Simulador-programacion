@@ -11,15 +11,18 @@ public class SimuladorProgramacion {
         Scanner teclado = new Scanner(System.in);
         //random
         Random aleatorio = new Random();
+        // opcion de hacia donde mirar
+        String opcion, opcionMin;
+        opcion = teclado.nextLine();
+        // transormo toda la escritura del usuario a miniscula
+        opcionMin = opcion.toLowerCase();
         //arraylist de los distintos grupos de animales
         ArrayList <AnimalesAcuaticos> Agua = new ArrayList<AnimalesAcuaticos>();
         ArrayList <AnimalesAereos> Aire = new ArrayList<AnimalesAereos>();
         ArrayList <AnimalesTerrestres> Tierra = new ArrayList<AnimalesTerrestres>();
         
         
-        
-        // [GENERACION DE ANIMALES]
-        
+        // [GENERACION DE ANIMALES]      
         // Animales Acuaticos
         AnimalesAcuaticos mantarraya = new AnimalesAcuaticos("Branquias", "Mantarraya", "Raya pinta", "Omnivora", "Gris y blanco", 120);
         AnimalesAcuaticos pezGlobo = new AnimalesAcuaticos("Branquias", "Pez", "Pez Globo", "Carnivora", "Amarillo", 30);
@@ -30,8 +33,7 @@ public class SimuladorProgramacion {
         AnimalesAcuaticos calamar = new AnimalesAcuaticos("Branquias", "Molusco", "Calamar", "Carnivoro", "Rosa", 11);
         AnimalesAcuaticos beluga = new AnimalesAcuaticos("Pulmones", "Ballena", "Beluga", "Carnivoro", "Blanco", 420);
         AnimalesAcuaticos loboMarino = new AnimalesAcuaticos("Pulmones", "Mamifero", "Lobo marino", "Carnivoro", "Negro", 210);
-        AnimalesAcuaticos nutria = new AnimalesAcuaticos("Pulmones", "Roedor", "Nutria", "Carnivoro", "Marron oscuro", 70);
-        
+        AnimalesAcuaticos nutria = new AnimalesAcuaticos("Pulmones", "Roedor", "Nutria", "Carnivoro", "Marron oscuro", 70);        
         // agrego los acuaticos al arraylist
         Agua.add(mantarraya);
         Agua.add(pezGlobo);
@@ -44,7 +46,8 @@ public class SimuladorProgramacion {
         Agua.add(loboMarino);
         Agua.add(nutria);
 
-        // Animales Aereos (ejemplos solamente, despues se pueden borrar)
+        
+        // Animales Aereos
         AnimalesAereos cardenal = new AnimalesAereos(25, 2, "Ave", "Cardenal", "Omnivoro", "Rojo", 22);
         AnimalesAereos paloma = new AnimalesAereos(28,3, "Ave","Paloma","Omnivoro","Azul grisaseo",27 );
         AnimalesAereos condor = new AnimalesAereos(300,10,"Ave","Condor","Caroñero","Blaco negro",130);
@@ -68,7 +71,7 @@ public class SimuladorProgramacion {
         Aire.add(canario);
         
         
-        // Animales Terrestres (ejemplos solamente, despues se pueden borrar)
+        // Animales Terrestres
         AnimalesTerrestres leon = new AnimalesTerrestres("Panthera leo", "Mamifero", "Leon", "Carnivoro", "Amarillo", 200);
         AnimalesTerrestres oso = new AnimalesTerrestres("Ailuropoda melanoleuca", "Mamifero","Oso", "Omnivoro","Blanco y negro", 200);
         AnimalesTerrestres lince = new AnimalesTerrestres("Lynx spp","  Mamifero","Lince","Carnivoro","Manchas y rayas", 120);
@@ -101,34 +104,49 @@ public class SimuladorProgramacion {
         Tierra.add(lobo);
         Tierra.add(jirafa);
         
+        
+        // INTRODUCCION AL SIMULADOR
+        System.out.println("DESCRIPCION DEL SIMULADOR");
+        
+        
         // [APARICION DE LOS ANIMALES DE FORMA ALEATORIA]
+        switch (opcionMin) {
+            case "abajo":
+                // cantidad random de animales acuaticos que apareceran
+                int cantidadRandomAgua = aleatorio.nextInt(Agua.size()) + 1;
+                // eleccion al azar de animales acuaticos
+                for (int i = 0; i < cantidadRandomAgua; i++) {
+                     int indiceAleatorioAgua = aleatorio.nextInt(Agua.size());
+                     AnimalesAcuaticos animal = Agua.get(indiceAleatorioAgua);
+                     System.out.println("Animal agua: " + animal.raza); 
+                }
+            break;
+            case "arriba":
+                //cantidad random de animales aereos que apareceran
+                int cantidadRandomAire = aleatorio.nextInt(Aire.size()) + 1;
+                 // eleccion al azar de animales aereos
+                for (int i = 0; i < cantidadRandomAire; i++) {
+                     int indiceAleatorioAire = aleatorio.nextInt(Aire.size());
+                      AnimalesAereos animal = Aire.get(indiceAleatorioAire);
+                     System.out.println("Animal aire: " + animal.raza); 
+                 }
+            break;
+            case "adelante":
+                //cantidad random de animales terrestres que apareceran
+                int cantidadRandomTierra = aleatorio.nextInt(Tierra.size()) + 1;
+                // eleccion al azar de animales terrestres
+                for (int i = 0; i < cantidadRandomTierra; i++) {
+                     int indiceAleatorioTierra = aleatorio.nextInt(Tierra.size());
+                     AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierra);
+                     System.out.println("Animal tierra: " + animal.raza); 
+                 }
+            break;
+            default:
+                System.out.println("Error al escribir, intente de nuevo");
+            break;
+        }
         
-        // cantidad random de animales acuaticos que apareceran
-       int cantidadRandomAgua = aleatorio.nextInt(Agua.size()) + 1;
-       // eleccion al azar de animales acuaticos
-       for (int i = 0; i < cantidadRandomAgua; i++) {
-            int indiceAleatorioAgua = aleatorio.nextInt(Agua.size());
-            AnimalesAcuaticos animal = Agua.get(indiceAleatorioAgua);
-            System.out.println("Animal agua: " + animal.raza); 
-        }
-       
-       //cantidad random de animales aereos que apareceran
-       int cantidadRandomAire = aleatorio.nextInt(Aire.size()) + 1;
-       // eleccion al azar de animales aereos
-       for (int i = 0; i < cantidadRandomAire; i++) {
-            int indiceAleatorioAire = aleatorio.nextInt(Aire.size());
-            AnimalesAereos animal = Aire.get(indiceAleatorioAire);
-            System.out.println("Animal aire: " + animal.raza); 
-        }
         
-       //cantidad random de animales terrestres que apareceran
-       int cantidadRandomTierra = aleatorio.nextInt(Tierra.size()) + 1;
-       // eleccion al azar de animales terrestres
-       for (int i = 0; i < cantidadRandomTierra; i++) {
-            int indiceAleatorioTierra = aleatorio.nextInt(Tierra.size());
-            AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierra);
-            System.out.println("Animal tierra: " + animal.raza); 
-        }
        
     
 
