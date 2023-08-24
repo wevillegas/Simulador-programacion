@@ -16,7 +16,7 @@ public class CreacionAgua {
         AnimalesAcuaticos calamar = new AnimalesAcuaticos("Branquias", "Molusco", "Calamar", "Carnivoro", "Rosa", 11);
         AnimalesAcuaticos beluga = new AnimalesAcuaticos("Pulmones", "Ballena", "Beluga", "Carnivoro", "Blanco", 420);
         AnimalesAcuaticos loboMarino = new AnimalesAcuaticos("Pulmones", "Mamifero", "Lobo marino", "Carnivoro", "Negro", 210);
-        AnimalesAcuaticos nutria = new AnimalesAcuaticos("Pulmones", "Roedor", "Nutria", "Carnivoro", "Marron oscuro", 70);
+        AnimalesAcuaticos besugo = new AnimalesAcuaticos("Branquias", "Pez", "Besugo", "Omnivoro", "Azul celeste", 41);
         // agrego los acuaticos al arraylist
         Agua.add(mantarraya);
         Agua.add(pezGlobo);
@@ -27,7 +27,7 @@ public class CreacionAgua {
         Agua.add(calamar);
         Agua.add(beluga);
         Agua.add(loboMarino);
-        Agua.add(nutria);
+        Agua.add(besugo);
         return Agua;
     }
 
