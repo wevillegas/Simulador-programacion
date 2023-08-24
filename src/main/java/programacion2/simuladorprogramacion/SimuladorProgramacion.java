@@ -14,18 +14,36 @@ public class SimuladorProgramacion {
 
         // Arraylist de los animales
         ArrayList<AnimalesAcuaticos> Agua = CreacionAgua.generadorAgua();
-        ArrayList<AnimalesAereos> Aire = CreacionAire.generadorAire(); 
-        ArrayList<AnimalesTerrestres> Tierra = CreacionTierra.generadorTierra(); 
+        ArrayList<AnimalesAereos> Aire = CreacionAire.generadorAire();
+        ArrayList<AnimalesTerrestres> Tierra = CreacionTierra.generadorTierra();
 
-            
         // INTRODUCCION AL SIMULADOR]
         System.out.println("DESCRIPCION DEL SIMULADOR");
-
-        // opcion de hacia donde mirar
-        String opcion, opcionMin;
-        opcion = teclado.nextLine();
-        // transormo toda la escritura del usuario a miniscula
-        opcionMin = opcion.toLowerCase();
+        
+        
+        // [FILTRO DE PALABRAS INCORRECTAS]
+        //genero un booleano como bandera para que al ingresar una palabra legal ejecute el codigo
+        boolean entradaValida = false;
+        // inicializo la variable donde se guardara lo que escriba el usuario
+        String opcionMin = "";
+        
+        // bucle while que filtra las palabras para que sean validas
+        while (!entradaValida) {
+            // opcion de hacia donde mirar
+            opcionMin = teclado.nextLine().toLowerCase();
+            switch (opcionMin) {
+                case "abajo":
+                case "arriba":
+                case "adelante":
+                case "izquierda":
+                case "derecha":
+                    entradaValida = true;
+                    break;
+                default:
+                    System.out.println("Dirección no válida. Intente de nuevo.");
+                    break;
+            }
+        }
 
         // [APARICION DE LOS ANIMALES DE FORMA ALEATORIA]
         switch (opcionMin) {
@@ -34,18 +52,18 @@ public class SimuladorProgramacion {
                 int cantidadRandomAgua = aleatorio.nextInt(Agua.size()) + 1;
                 // creo un array donde se guardaran los animales avistados
                 AnimalesAcuaticos animalesAcuaticosAvistados[];
-                animalesAcuaticosAvistados = new AnimalesAcuaticos[cantidadRandomAgua];                
+                animalesAcuaticosAvistados = new AnimalesAcuaticos[cantidadRandomAgua];
                 // eleccion al azar de animales acuaticos
                 for (int i = 0; i < cantidadRandomAgua; i++) {
                     int indiceAleatorioAgua = aleatorio.nextInt(Agua.size());
                     AnimalesAcuaticos animal = Agua.get(indiceAleatorioAgua);
                     // asigno un animal a cada espacio del array
                     animalesAcuaticosAvistados[i] = animal;
-                }                
+                }
                 System.out.println("Decides mirar al mar que se encuentra debajo de ti, ahí avistas a los siguientes animales");
                 for (int i = 0; i < cantidadRandomAgua; i++) {
                     System.out.println("Animal acuatico: " + animalesAcuaticosAvistados[i].getRaza());
-                }                
+                }
                 break;
             case "arriba":
                 //cantidad random de animales aereos que apareceran
