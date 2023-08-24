@@ -90,4 +90,5 @@ public class Descripcion {
             System.out.println("Respiracion:Pulmones, Especie:Roedor, raza:Nutria , alimentacion:Carnivoro, color:Marron oscuro,   tamaño:70 ");
             break;
     }
+            
 }
