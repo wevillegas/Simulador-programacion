@@ -40,7 +40,7 @@ public class SimuladorProgramacion {
                     entradaValida = true;
                     break;
                 default:
-                    System.out.println("Dirección no válida. Intente de nuevo.");
+                    System.out.println("Palabra invalida, ¿hacia que lugar desea ver?");
                     break;
             }
         }
