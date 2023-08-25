@@ -19,14 +19,13 @@ public class SimuladorProgramacion {
 
         // INTRODUCCION AL SIMULADOR]
         System.out.println("DESCRIPCION DEL SIMULADOR");
-        
-        
+
         // [FILTRO DE PALABRAS INCORRECTAS]
         //genero un booleano como bandera para que al ingresar una palabra legal ejecute el codigo
         boolean entradaValida = false;
         // inicializo la variable donde se guardara lo que escriba el usuario
         String opcionMin = "";
-        
+
         // bucle while que filtra las palabras para que sean validas
         while (!entradaValida) {
             // opcion de hacia donde mirar
@@ -47,6 +46,7 @@ public class SimuladorProgramacion {
 
         // [APARICION DE LOS ANIMALES DE FORMA ALEATORIA]
         switch (opcionMin) {
+
             case "abajo":
                 // cantidad random de animales acuaticos que apareceran
                 int cantidadRandomAgua = aleatorio.nextInt(Agua.size()) + 1;
@@ -64,7 +64,42 @@ public class SimuladorProgramacion {
                 for (int i = 0; i < cantidadRandomAgua; i++) {
                     System.out.println("Animal acuatico: " + animalesAcuaticosAvistados[i].getRaza());
                 }
+
+                // [MOSTRAR LOS DETALLES DEL ANIMAL ACUATICO ELEGIDO]
+                System.out.println("¿Que animal deseas ver con mas detenimiento?");
+
+                // ---- [FILTRO DE PALABRAS PARA QUE SOLO SE PUEDAN ESCRIBIR ANIMALES QUE ESTEN EN EL ARRAY DE ANIMALES AVISTADOS] ----
+                // creo la string que tendra el valor ingresado por teclado
+                String animalAVerAcu = teclado.nextLine();
+                // creo la bandera que me servirá para la validacion de lo escrito por teclado
+                boolean banderaValidacionAnimalAcu = false;
+                // bucle que ejecuta el codigo siempre y cuando la bandera lo permita
+                while (!banderaValidacionAnimalAcu) {
+                    // bandera q me permitira imprimir los datos del animal sin que se repita en caso de que aparezca mas de una vez
+                    boolean banderaAnimalAVerAcu = false;
+                    // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
+                    for (int i = 0; i < cantidadRandomAgua; i++) {
+                        if (animalesAcuaticosAvistados[i].getRaza().equals(animalAVerAcu) && !banderaAnimalAVerAcu) {
+                            // imprimo todos los datos
+                            System.out.println("El animal que observas detalladamente es un/a " + animalesAcuaticosAvistados[i].getRaza());
+                            System.out.println("Es de la especie de los " + animalesAcuaticosAvistados[i].getEspecie());
+                            System.out.println("Es un animal " + animalesAcuaticosAvistados[i].getAlimentacion());
+                            System.out.println("Respira a traves de " + animalesAcuaticosAvistados[i].getRespiracion());
+                            System.out.println("Mide aproximadamente " + animalesAcuaticosAvistados[i].getTamanio() + "cm");
+                            // paso la bandera a true para q no se repita el animal
+                            banderaAnimalAVerAcu = true;
+                            // paso la bandera a true para validar la palabra escrita por el usuario
+                            banderaValidacionAnimalAcu = true;
+                        }
+                    }
+                    // si la palabra no es correcta, se mandará este mensaje
+                    if (!banderaValidacionAnimalAcu) {
+                        System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
+                        animalAVerAcu = teclado.nextLine();
+                    }
+                }
                 break;
+
             case "arriba":
                 //cantidad random de animales aereos que apareceran
                 int cantidadRandomAire = aleatorio.nextInt(Aire.size()) + 1;
