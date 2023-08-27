@@ -22,11 +22,11 @@ public class CreacionTierra {
         AnimalesTerrestres koala = new AnimalesTerrestres("Marsupial", "Phascolarctos cinereus", "Koala", "Herbivoros", "Gris", 70);
         AnimalesTerrestres lobo = new AnimalesTerrestres("Mamifero", "Canis lupus", "Lobo", "Carnivoros", "Gris", 150);
         AnimalesTerrestres jirafa = new AnimalesTerrestres("Mamifero", "Giraffa camelopardalis", "Jirafa", "Herbivoro", "Amarillo", 420);
-        AnimalesTerrestres perro = new AnimalesTerrestres("mamifero","Perro","Canis lupus familiaris","carnivoro","amarillo",40);
-        AnimalesTerrestres gato = new AnimalesTerrestres("mamifero","gato","Felis catus","carnivoro","blanco y marron",25);
-        AnimalesTerrestres conejo = new AnimalesTerrestres("mamifero","conejo","Oryctolagus cuniculus","hervivioro","marron",20);
-        AnimalesTerrestres elefante = new AnimalesTerrestres("mamifero","elefante","Elephas","hervivioro","gris",300);
-        AnimalesTerrestres aveztruz = new AnimalesTerrestres("mamifero","aveztruz","Struthio camelus","omnivoro","negro y blanco",200);
+        AnimalesTerrestres perro = new AnimalesTerrestres("mamifero","Canis lupus familiaris","perro","carnivoro","amarillo",40);
+        AnimalesTerrestres gato = new AnimalesTerrestres("mamifero","Felis catus","gato","carnivoro","blanco y marron",25);
+        AnimalesTerrestres conejo = new AnimalesTerrestres("mamifero","Oryctolagus cuniculus","conejo","hervivioro","marron",20);
+        AnimalesTerrestres elefante = new AnimalesTerrestres("mamifero","Elephas","elefante","hervivioro","gris",300);
+        AnimalesTerrestres avestruz = new AnimalesTerrestres("mamifero","Struthio camelus","avestruz","omnivoro","negro y blanco",200);
         //agrego los terrestres al arraylist
         Tierra.add(leon);
         Tierra.add(oso);
@@ -47,7 +47,7 @@ public class CreacionTierra {
         Tierra.add(gato);
         Tierra.add(conejo);
         Tierra.add(elefante);
-        Tierra.add(aveztruz);
+        Tierra.add(avestruz);
         return Tierra;
     }
 }

@@ -16,16 +16,20 @@ public class SimuladorProgramacion {
         ArrayList<AnimalesAcuaticos> Agua = CreacionAgua.generadorAgua();
         ArrayList<AnimalesAereos> Aire = CreacionAire.generadorAire();
         ArrayList<AnimalesTerrestres> Tierra = CreacionTierra.generadorTierra();
+        ArrayList<Arboles> Arbol = CreacionArbol.generadorArbol();
+        ArrayList<Flores> Flor = CreacionFlores.generadorFlores();
 
         // INTRODUCCION AL SIMULADOR]
+        System.out.println("------------------------------------------------------------------------------------------------");
         System.out.println("Bienvenido, usted se encuentra parado en un mirador dentro de una isla en medio de un archipielago \n"
                 + "con el objetivo de poder avistar la diversa flora y fauna de la zona. \n"
                 + "En frente de ti hay una isla grande, y puedes ver las otras islas a la izquierda y a la derecha. \n"
                 + "Arriba está el cielo y abajo el mar. Tienes unos binoculares y puedes elegir en qué dirección mirar. \n"
                 + "Con ellos, puedes ver plantas y animales interesantes en cada dirección. \n"
                 + "Es como si fueras un explorador, descubriendo todas las cosas geniales que hay en esta área.");
+        System.out.println("-------------------------------------------------------------------------------------------------");
         System.out.println("¿Hacia que direccion le gustaria mirar?");
-        
+
         // [FILTRO DE PALABRAS INCORRECTAS]
         //genero un booleano como bandera para que al ingresar una palabra legal ejecute el codigo
         boolean entradaValida = false;
@@ -45,6 +49,7 @@ public class SimuladorProgramacion {
                     entradaValida = true;
                     break;
                 default:
+                    System.out.println("-------------------------------------------------------------------------------------------------");
                     System.out.println("Palabra invalida, ¿hacia que direccion le gustaria mirar?");
                     break;
             }
@@ -66,11 +71,12 @@ public class SimuladorProgramacion {
                     // asigno un animal a cada espacio del array
                     animalesAcuaticosAvistados[i] = animal;
                 }
+                System.out.println("-------------------------------------------------------------------------------------------------");
                 System.out.println("Decides mirar al mar que se encuentra debajo de ti, allí avistas a los siguientes animales");
                 for (int i = 0; i < cantidadRandomAgua; i++) {
                     System.out.println(animalesAcuaticosAvistados[i].getRaza());
                 }
-
+                System.out.println("-------------------------------------------------------------------------------------------------");
                 // ----- [MOSTRAR LOS DETALLES DEL ANIMAL ACUATICO ELEGIDO] -----
                 System.out.println("¿Que animal deseas ver con mas detenimiento?");
 
@@ -86,6 +92,7 @@ public class SimuladorProgramacion {
                     // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
                     for (int i = 0; i < cantidadRandomAgua; i++) {
                         if (animalesAcuaticosAvistados[i].getRaza().equals(animalAVerAcu) && !banderaAnimalAVerAcu) {
+                            System.out.println("-------------------------------------------------------------------------------------------------");
                             // imprimo todos los datos
                             System.out.println("El animal que observas detalladamente es un/a " + animalesAcuaticosAvistados[i].getRaza());
                             System.out.println("Especie: " + animalesAcuaticosAvistados[i].getEspecie());
@@ -101,6 +108,7 @@ public class SimuladorProgramacion {
                     }
                     // si la palabra no es correcta, se mandará este mensaje
                     if (!banderaValidacionAnimalAcu) {
+                        System.out.println("-------------------------------------------------------------------------------------------------");
                         System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
                         animalAVerAcu = teclado.nextLine();
                     }
@@ -119,11 +127,13 @@ public class SimuladorProgramacion {
                     AnimalesAereos animal = Aire.get(indiceAleatorioAire);
                     animalesAereosAvistados[i] = animal;
                 }
+                System.out.println("-------------------------------------------------------------------------------------------------");
                 System.out.println("Decides levantar la cabeza para ver el cielo, allí avistas a los siguientes animales");
                 for (int i = 0; i < cantidadRandomAire; i++) {
                     System.out.println(animalesAereosAvistados[i].getRaza());
                 }
 
+                System.out.println("-------------------------------------------------------------------------------------------------");
                 // ----- [MOSTRAR LOS DETALLES DEL ANIMAL AEREO ELEGIDO] -----
                 System.out.println("¿Que animal deseas ver con mas detenimiento?");
 
@@ -139,6 +149,7 @@ public class SimuladorProgramacion {
                     // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
                     for (int i = 0; i < cantidadRandomAire; i++) {
                         if (animalesAereosAvistados[i].getRaza().equals(animalAVerAire) && !banderaAnimalAVerAire) {
+                            System.out.println("-------------------------------------------------------------------------------------------------");
                             // imprimo todos los datos
                             System.out.println("El animal que observas detalladamente es un/a " + animalesAereosAvistados[i].getRaza());
                             System.out.println("Especie: " + animalesAereosAvistados[i].getEspecie());
@@ -155,6 +166,7 @@ public class SimuladorProgramacion {
                     }
                     // si la palabra no es correcta, se mandará este mensaje
                     if (!banderaValidacionAnimalAire) {
+                        System.out.println("-------------------------------------------------------------------------------------------------");
                         System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
                         animalAVerAire = teclado.nextLine();
                     }
@@ -172,11 +184,13 @@ public class SimuladorProgramacion {
                     AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierra);
                     animalesTerrestresAvistados[i] = animal;
                 }
-                System.out.println("Decides mirar adelante, donde se encuentra la isla mas grande, allí avistas a los siguientes animales");
+                System.out.println("-------------------------------------------------------------------------------------------------");
+                System.out.println("Decides mirar adelante, donde se encuentra la isla mas grande del archipielago, allí avistas a los siguientes animales y plantas");
                 for (int i = 0; i < cantidadRandomTierra; i++) {
                     System.out.println(animalesTerrestresAvistados[i].getRaza());
                 }
-                
+
+                System.out.println("-------------------------------------------------------------------------------------------------");
                 System.out.println("¿Que animal deseas ver con mas detenimiento?");
 
                 // ---- [FILTRO DE PALABRAS PARA QUE SOLO SE PUEDAN ESCRIBIR ANIMALES QUE ESTEN EN EL ARRAY DE ANIMALES AVISTADOS E IMPRESION DE DATOS] ----
@@ -191,6 +205,7 @@ public class SimuladorProgramacion {
                     // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
                     for (int i = 0; i < cantidadRandomTierra; i++) {
                         if (animalesTerrestresAvistados[i].getRaza().equals(animalAVerTierra) && !banderaAnimalAVerTierra) {
+                            System.out.println("-------------------------------------------------------------------------------------------------");
                             // imprimo todos los datos
                             System.out.println("El animal que observas detalladamente es un/a " + animalesTerrestresAvistados[i].getRaza());
                             System.out.println("Especie: " + animalesTerrestresAvistados[i].getEspecie());
@@ -206,8 +221,119 @@ public class SimuladorProgramacion {
                     }
                     // si la palabra no es correcta, se mandará este mensaje
                     if (!banderaValidacionAnimalTierra) {
+                        System.out.println("-------------------------------------------------------------------------------------------------");
                         System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
                         animalAVerTierra = teclado.nextLine();
+                    }
+                }
+                break;
+            case "izquierda":
+                //cantidad random de animales terrestres que apareceran
+                int cantidadRandomTierraIzq = aleatorio.nextInt(Tierra.size()) + 1;
+                // creo un array donde se guardaran los animales avistados
+                AnimalesTerrestres animalesTerrestresAvistadosIzq[];
+                animalesTerrestresAvistadosIzq = new AnimalesTerrestres[cantidadRandomTierraIzq];
+                // eleccion al azar de animales terrestres
+                for (int i = 0; i < cantidadRandomTierraIzq; i++) {
+                    int indiceAleatorioTierraIzq = aleatorio.nextInt(Tierra.size());
+                    AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierraIzq);
+                    animalesTerrestresAvistadosIzq[i] = animal;
+                }
+                System.out.println("-------------------------------------------------------------------------------------------------");
+                System.out.println("Decides mirar hacia la izquierda, donde se encuentra una de las grandes islas del archipielago, allí avistas a los siguientes animales y plantas");
+                for (int i = 0; i < cantidadRandomTierraIzq; i++) {
+                    System.out.println(animalesTerrestresAvistadosIzq[i].getRaza());
+                }
+
+                System.out.println("-------------------------------------------------------------------------------------------------");
+                System.out.println("¿Que animal deseas ver con mas detenimiento?");
+
+                // ---- [FILTRO DE PALABRAS PARA QUE SOLO SE PUEDAN ESCRIBIR ANIMALES QUE ESTEN EN EL ARRAY DE ANIMALES AVISTADOS E IMPRESION DE DATOS] ----
+                // creo la string que tendra el valor ingresado por teclado
+                String animalAVerTierraIzq = teclado.nextLine();
+                // creo la bandera que me servirá para la validacion de lo escrito por teclado
+                boolean banderaValidacionAnimalTierraIzq = false;
+                // bucle que ejecuta el codigo siempre y cuando la bandera lo permita
+                while (!banderaValidacionAnimalTierraIzq) {
+                    // bandera q me permitira imprimir los datos del animal sin que se repita en caso de que aparezca mas de una vez
+                    boolean banderaAnimalAVerTierraIzq = false;
+                    // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
+                    for (int i = 0; i < cantidadRandomTierraIzq; i++) {
+                        if (animalesTerrestresAvistadosIzq[i].getRaza().equals(animalAVerTierraIzq) && !banderaAnimalAVerTierraIzq) {
+                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            // imprimo todos los datos
+                            System.out.println("El animal que observas detalladamente es un/a " + animalesTerrestresAvistadosIzq[i].getRaza());
+                            System.out.println("Especie: " + animalesTerrestresAvistadosIzq[i].getEspecie());
+                            System.out.println("Alimentacion: " + animalesTerrestresAvistadosIzq[i].getAlimentacion());
+                            System.out.println("Color: " + animalesTerrestresAvistadosIzq[i].getColor());
+                            System.out.println("Tamaño aproximado: " + animalesTerrestresAvistadosIzq[i].getTamanio() + "cm");
+                            System.out.println("Clasificacion: " + animalesTerrestresAvistadosIzq[i].getClasificacion());
+                            // paso la bandera a true para q no se repita el animal
+                            banderaAnimalAVerTierraIzq = true;
+                            // paso la bandera a true para validar la palabra escrita por el usuario
+                            banderaValidacionAnimalTierraIzq = true;
+                        }
+                    }
+                    // si la palabra no es correcta, se mandará este mensaje
+                    if (!banderaValidacionAnimalTierraIzq) {
+                        System.out.println("-------------------------------------------------------------------------------------------------");
+                        System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
+                        animalAVerTierraIzq = teclado.nextLine();
+                    }
+                }
+                break;
+                case "derecha":
+                //cantidad random de animales terrestres que apareceran
+                int cantidadRandomTierraDer = aleatorio.nextInt(Tierra.size()) + 1;
+                // creo un array donde se guardaran los animales avistados
+                AnimalesTerrestres animalesTerrestresAvistadosDer[];
+                animalesTerrestresAvistadosDer = new AnimalesTerrestres[cantidadRandomTierraDer];
+                // eleccion al azar de animales terrestres
+                for (int i = 0; i < cantidadRandomTierraDer; i++) {
+                    int indiceAleatorioTierraDer = aleatorio.nextInt(Tierra.size());
+                    AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierraDer);
+                    animalesTerrestresAvistadosDer[i] = animal;
+                }
+                System.out.println("-------------------------------------------------------------------------------------------------");
+                System.out.println("Decides mirar hacia la derecha, donde se encuentra una de las grandes islas del archipielago, allí avistas a los siguientes animales y plantas");
+                for (int i = 0; i < cantidadRandomTierraDer; i++) {
+                    System.out.println(animalesTerrestresAvistadosDer[i].getRaza());
+                }
+                
+                System.out.println("-------------------------------------------------------------------------------------------------");
+                System.out.println("¿Que animal deseas ver con mas detenimiento?");
+
+                // ---- [FILTRO DE PALABRAS PARA QUE SOLO SE PUEDAN ESCRIBIR ANIMALES QUE ESTEN EN EL ARRAY DE ANIMALES AVISTADOS E IMPRESION DE DATOS] ----
+                // creo la string que tendra el valor ingresado por teclado
+                String animalAVerTierraDer = teclado.nextLine();
+                // creo la bandera que me servirá para la validacion de lo escrito por teclado
+                boolean banderaValidacionAnimalTierraDer = false;
+                // bucle que ejecuta el codigo siempre y cuando la bandera lo permita
+                while (!banderaValidacionAnimalTierraDer) {
+                    // bandera q me permitira imprimir los datos del animal sin que se repita en caso de que aparezca mas de una vez
+                    boolean banderaAnimalAVerTierraDer = false;
+                    // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
+                    for (int i = 0; i < cantidadRandomTierraDer; i++) {
+                        if (animalesTerrestresAvistadosDer[i].getRaza().equals(animalAVerTierraDer) && !banderaAnimalAVerTierraDer) {
+                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            // imprimo todos los datos
+                            System.out.println("El animal que observas detalladamente es un/a " + animalesTerrestresAvistadosDer[i].getRaza());
+                            System.out.println("Especie: " + animalesTerrestresAvistadosDer[i].getEspecie());
+                            System.out.println("Alimentacion: " + animalesTerrestresAvistadosDer[i].getAlimentacion());
+                            System.out.println("Color: " + animalesTerrestresAvistadosDer[i].getColor());
+                            System.out.println("Tamaño aproximado: " + animalesTerrestresAvistadosDer[i].getTamanio() + "cm");
+                            System.out.println("Clasificacion: " + animalesTerrestresAvistadosDer[i].getClasificacion());
+                            // paso la bandera a true para q no se repita el animal
+                            banderaAnimalAVerTierraDer = true;
+                            // paso la bandera a true para validar la palabra escrita por el usuario
+                            banderaValidacionAnimalTierraDer = true;
+                        }
+                    }
+                    // si la palabra no es correcta, se mandará este mensaje
+                    if (!banderaValidacionAnimalTierraDer) {
+                        System.out.println("-------------------------------------------------------------------------------------------------");
+                        System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
+                        animalAVerTierraDer = teclado.nextLine();
                     }
                 }
                 break;
