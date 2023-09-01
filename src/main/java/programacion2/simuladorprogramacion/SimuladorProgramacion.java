@@ -7,6 +7,13 @@ import java.util.Random;
 public class SimuladorProgramacion {
 
     public static void main(String[] args) {
+        
+        Historias historias = new Historias();
+        
+        // Llamar a los métodos para mostrar historias
+        String historiaAgua = historias.MostrarHistoriaAgua();
+        String historiaTierra = historias.MostrarHistoriaTierra();
+        String historiaAire = historias.MostrarHistoriaAire();
 
         Scanner scanner = new Scanner(System.in);
         String respuesta;
@@ -72,6 +79,9 @@ public class SimuladorProgramacion {
             switch (opcionMin) {
 
                 case "abajo":
+                    
+                    // mostrando historia abajo
+                    System.out.println("Historia de Agua: " + historiaAgua);
                     /*mismo caso que el de arriba solo que se hace en cada case del switch*/
                     do {
                     // ---------- [ANIMALES] ----------
@@ -142,6 +152,9 @@ public class SimuladorProgramacion {
                     break;
                     
                 case "arriba":
+                    
+                    // Mostrando Historia aire
+                    System.out.println("Historia de Aire: " + historiaAire);
                                         
                     do {
                     // ---------- [ANIMALES] ----------
@@ -209,7 +222,8 @@ public class SimuladorProgramacion {
                     } while (respuesta.equalsIgnoreCase("si"));
                     break;
                 case "adelante":
-                                    
+                    // Mostrando historia tierra
+                    System.out.println("Historia de Tierra: " + historiaTierra);            
                     do {
                     // ---------- [ANIMALES] ----------
                     //cantidad random de animales terrestres que apareceran
@@ -342,6 +356,9 @@ public class SimuladorProgramacion {
                     } while (respuesta.equalsIgnoreCase("si"));
                     break;
                 case "izquierda":
+                    
+                    // Mostrando historia tierra
+                    System.out.println("Historia de Tierra: " + historiaTierra);
                                     
                     do {
                     //cantidad random de animales terrestres que apareceran
@@ -472,7 +489,10 @@ public class SimuladorProgramacion {
                     } while (respuesta.equalsIgnoreCase("si"));
                     break;
                 case "derecha":
-                                    
+                                 
+                    // Mostrando historia tierra
+                    System.out.println("Historia de Tierra: " + historiaTierra);
+                    
                     do {
                     //cantidad random de animales terrestres que apareceran
                     int cantidadRandomTierraDer = aleatorio.nextInt(Tierra.size()) + 1;
