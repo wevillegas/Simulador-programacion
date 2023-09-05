@@ -326,7 +326,7 @@ public class SimuladorProgramacion {
                                 System.out.println("Color: " + arbolesAvistados[i].getColor());
                                 System.out.println("Nombre cientifico: " + arbolesAvistados[i].getTipo());
                                 System.out.println("Habitat:" + arbolesAvistados[i].getHabitat());
-                                System.out.println("Tamaño aproximado: " + arbolesAvistados[i].getTamanio() + "cm");
+                                System.out.println("Tamaño aproximado: " + arbolesAvistados[i].getTamanio() + "m");
                                 System.out.println("Hojas: " + arbolesAvistados[i].getHojas());
                                 System.out.println("Fruto: " + arbolesAvistados[i].getFruto());
                                 banderaValidacionArbol = true;
@@ -459,7 +459,7 @@ public class SimuladorProgramacion {
                                 System.out.println("Color: " + arbolesAvistadosIzq[i].getColor());
                                 System.out.println("Nombre cientifico: " + arbolesAvistadosIzq[i].getTipo());
                                 System.out.println("Habitat:" + arbolesAvistadosIzq[i].getHabitat());
-                                System.out.println("Tamaño aproximado: " + arbolesAvistadosIzq[i].getTamanio() + "cm");
+                                System.out.println("Tamaño aproximado: " + arbolesAvistadosIzq[i].getTamanio() + "m");
                                 System.out.println("Hojas: " + arbolesAvistadosIzq[i].getHojas());
                                 System.out.println("Fruto: " + arbolesAvistadosIzq[i].getFruto());
                                 banderaValidacionArbolIzq = true;
@@ -594,7 +594,7 @@ public class SimuladorProgramacion {
                                 System.out.println("Color: " + arbolesAvistadosDer[i].getColor());
                                 System.out.println("Nombre cientifico: " + arbolesAvistadosDer[i].getTipo());
                                 System.out.println("Habitat:" + arbolesAvistadosDer[i].getHabitat());
-                                System.out.println("Tamaño aproximado: " + arbolesAvistadosDer[i].getTamanio() + "cm");
+                                System.out.println("Tamaño aproximado: " + arbolesAvistadosDer[i].getTamanio() + "m");
                                 System.out.println("Hojas: " + arbolesAvistadosDer[i].getHojas());
                                 System.out.println("Fruto: " + arbolesAvistadosDer[i].getFruto());
                                 banderaValidacionArbolDer = true;
