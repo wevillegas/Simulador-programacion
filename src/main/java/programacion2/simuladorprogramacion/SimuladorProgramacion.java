@@ -30,6 +30,7 @@ public class SimuladorProgramacion {
             // Arraylist de las plantas
             ArrayList<Arboles> Arbol = CreacionArbol.generadorArbol();
             ArrayList<Flores> Flor = CreacionFlores.generadorFlores();
+            ArrayList<FloraAcuatica> FlorAgua = CreacionFloraAcuatica.generadorFloresAcuaticas();
 
             // ---------- INTRODUCCION AL SIMULADOR] ----------
             System.out.println("------------------------------------------------------------------------------------------------");
@@ -145,6 +146,44 @@ public class SimuladorProgramacion {
                     }
                     it++;
                     }
+                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("Tambien puedes ver a las siguientes plantas acuaticas");
+                    for (int i = 0; i < FlorAgua.size(); i++) {
+                        
+                        FloraAcuatica florAgua = FlorAgua.get(i);
+                        System.out.println(florAgua.getEspecie());
+                        
+                    }
+                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("Quiere ver con detenimiento alguna planta ? Escriba el nombre de la planta");
+                    System.out.println("o ... escriba \"no\" si desea saltear este proceso");
+                    String florAcuatica;
+                    florAcuatica = scanner.nextLine();
+                    int itaf = 0;
+                    while(!florAcuatica.equalsIgnoreCase("no")&& itaf<=0){
+                    boolean banderaValidacionArbol = false;
+                    while (!banderaValidacionArbol) {
+                        for (int i = 0; i < FlorAgua.size(); i++) {                           
+                            if (FlorAgua.get(i).getEspecie().equalsIgnoreCase(florAcuatica)) {
+                                System.out.println("-------------------------------------------------------------------------------------------------");
+                                System.out.println("La flor que observas detalladamente es un/a " + FlorAgua.get(i).getEspecie());
+                                System.out.println("Color: " + FlorAgua.get(i).getColor());
+                                System.out.println("Nombre cientifico: " + FlorAgua.get(i).getTipo());
+                                System.out.println("Habitat: " + FlorAgua.get(i).getHabitat());
+                                System.out.println("Tamaño aproximado: " + FlorAgua.get(i).getTamanio() + "cm");
+                                System.out.println("Tipo: " + FlorAgua.get(i).getTipoAgua());
+                                banderaValidacionArbol = true;
+                            }
+                        }
+                        if (!banderaValidacionArbol) {
+                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            System.out.println("Esa planta no esta siendo avistada. Escoja una planta que tenga a la vista para analizarla");
+                            florAcuatica = scanner.nextLine();
+                        }
+                    }
+                    itaf++; /*itaf (iteración arboles o flores)*/
+                    }
+                    
                     System.out.println("-------------------------------------------------------------------------------------------------");
                     System.out.println("¿Quiere volver a analizar el entorno? (presione \"si\" en caso afirmativo)");
                     respuesta = scanner.nextLine();
