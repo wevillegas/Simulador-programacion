@@ -15,7 +15,7 @@ public class CreacionFlores {
         Flores orquidea = new Flores("Formas variadas", "Orquidea", "Naranja", "Orchidaceae", "Varia segun especie", 15);
         Flores amapola = new Flores("Grandes y vistosos", "Amapola", "Rojo", "Papaver", "Campos", 6);
         Flores clavel = new Flores("Dentados", "Clavel", "Amarillo", "Dianthus", "Jardines", 6);
-        Flores narciso = new Flores("Forman una corona", "Narciso", "Blanco", "Narcissus", "", 12);
+        Flores narciso = new Flores("Forman una corona", "Narciso", "Blanco", "Narcissus", "Suelo fertil", 12);
         Flores dalia = new Flores("Varian segun el tipo", "Dalia", "Lavanda", "Dahlia", "Jardines", 30);
         // agrego los acuaticos al arraylist
         Flores.add(rosa);

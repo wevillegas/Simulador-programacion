@@ -15,7 +15,7 @@ public class CreacionFloraAcuatica{
         FloraAcuatica anubias = new FloraAcuatica("Ribera", "Anubias", "Verde", "Araceae", "Agua", 13);
         FloraAcuatica elodea = new FloraAcuatica("Oxigenadora", "Elodea", "Verde", "Hydrocharitaceae", "Agua", 2);
         FloraAcuatica vallisneria = new FloraAcuatica("Aguas profundas", "Vallisneria", "Verde", "Hydrocharitaceae", "Agua", 80);
-        FloraAcuatica aldrovanda  = new FloraAcuatica("Flotante", "Aldrovanda", "Verde", "	Droseraceae", "Agua", 3);
+        FloraAcuatica aldrovanda  = new FloraAcuatica("Flotante", "Aldrovanda", "Verde", "Droseraceae", "Agua", 3);
         // agrego las flores acuaticas al arraylist
         FloresAcuaticas.add(aurea);
         FloresAcuaticas.add(lirioAcuatico);

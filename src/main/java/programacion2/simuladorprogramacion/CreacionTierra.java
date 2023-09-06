@@ -7,9 +7,9 @@ public class CreacionTierra {
         ArrayList<AnimalesTerrestres> Tierra = new ArrayList<>();
         // Animales Aereos
         // Animales Terrestres
-        AnimalesTerrestres leon = new AnimalesTerrestres("Panthera leo", "Mamifero", "Leon", "Carnivoro", "Amarillo", 200);
-        AnimalesTerrestres oso = new AnimalesTerrestres("Ailuropoda melanoleuca", "Mamifero", "Oso", "Omnivoro", "Blanco y negro", 200);
-        AnimalesTerrestres lince = new AnimalesTerrestres("Lynx spp", "  Mamifero", "Lince", "Carnivoro", "Manchas y rayas", 120);
+        AnimalesTerrestres leon = new AnimalesTerrestres( "Mamifero","Panthera leo", "Leon", "Carnivoro", "Amarillo", 200);
+        AnimalesTerrestres oso = new AnimalesTerrestres( "Mamifero", "Ailuropoda melanoleuca","Oso", "Omnivoro", "Blanco y negro", 200);
+        AnimalesTerrestres lince = new AnimalesTerrestres( "Mamifero","Lynx spp", "Lince", "Carnivoro", "Manchas y rayas", 120);
         AnimalesTerrestres chimpance = new AnimalesTerrestres("Primate", "Pan troglodytes", "Chimpancé", "Omnivoro", "Negro", 63);
         AnimalesTerrestres guepardo = new AnimalesTerrestres("Mamifero", "Acinonyx jubatus", "Guepardo", "Carnivoro", "Amarillo", 130);
         AnimalesTerrestres puma = new AnimalesTerrestres("Mamifero", "Felino", "Puma", "Carnivoro", "Marron", 230);
@@ -22,11 +22,11 @@ public class CreacionTierra {
         AnimalesTerrestres koala = new AnimalesTerrestres("Marsupial", "Phascolarctos cinereus", "Koala", "Herbivoros", "Gris", 70);
         AnimalesTerrestres lobo = new AnimalesTerrestres("Mamifero", "Canis lupus", "Lobo", "Carnivoros", "Gris", 150);
         AnimalesTerrestres jirafa = new AnimalesTerrestres("Mamifero", "Giraffa camelopardalis", "Jirafa", "Herbivoro", "Amarillo", 420);
-        AnimalesTerrestres perro = new AnimalesTerrestres("mamifero","Canis lupus familiaris","perro","carnivoro","amarillo",40);
-        AnimalesTerrestres gato = new AnimalesTerrestres("mamifero","Felis catus","gato","carnivoro","blanco y marron",25);
-        AnimalesTerrestres conejo = new AnimalesTerrestres("mamifero","Oryctolagus cuniculus","conejo","hervivioro","marron",20);
-        AnimalesTerrestres elefante = new AnimalesTerrestres("mamifero","Elephas","elefante","hervivioro","gris",300);
-        AnimalesTerrestres avestruz = new AnimalesTerrestres("mamifero","Struthio camelus","avestruz","omnivoro","negro y blanco",200);
+        AnimalesTerrestres perro = new AnimalesTerrestres("Mamifero","Canis lupus familiaris","Perro","Carnivoro","Amarillo",40);
+        AnimalesTerrestres gato = new AnimalesTerrestres("Mamifero","Felis catus","Gato","Carnivoro","Blanco y marron",25);
+        AnimalesTerrestres conejo = new AnimalesTerrestres("Mamifero","Oryctolagus cuniculus","Conejo","Hervivioro","Marron",20);
+        AnimalesTerrestres elefante = new AnimalesTerrestres("Mamifero","Elephas","Elefante","Hervivioro","Gris",300);
+        AnimalesTerrestres avestruz = new AnimalesTerrestres("Mamifero","Struthio camelus","Avestruz","Omnivoro","Negro y blanco",200);
         //agrego los terrestres al arraylist
         Tierra.add(leon);
         Tierra.add(oso);
