@@ -13,6 +13,8 @@ public class SimuladorProgramacion {
         // Llamar a los métodos para mostrar historias
         String historiaAgua = historias.MostrarHistoriaAgua();
         String historiaTierra = historias.MostrarHistoriaTierra();
+        String historiaTierraIzquierda = historias.MostrarHistoriaTierraIzquierda();
+        String historiaTierraDerecha = historias.MostrarHistoriaTierraDerecha();
         String historiaAire = historias.MostrarHistoriaAire();
 
         Scanner scanner = new Scanner(System.in);
@@ -397,7 +399,7 @@ public class SimuladorProgramacion {
                 case "izquierda":
                     
                     // Mostrando historia tierra
-                    System.out.println("Historia de Tierra: " + historiaTierra);
+                    System.out.println("Historia de Tierra: " + historiaTierraIzquierda);
                                     
                     do {
                     //cantidad random de animales terrestres que apareceran
@@ -530,7 +532,7 @@ public class SimuladorProgramacion {
                 case "derecha":
                                  
                     // Mostrando historia tierra
-                    System.out.println("Historia de Tierra: " + historiaTierra);
+                    System.out.println("Historia de Tierra: " + historiaTierraDerecha);
                     
                     do {
                     //cantidad random de animales terrestres que apareceran
