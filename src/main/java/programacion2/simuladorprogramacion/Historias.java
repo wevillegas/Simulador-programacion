@@ -59,7 +59,7 @@ public class Historias {
         return historiasAire[indice];
     }
 
-    public static void main(String[] args) {
+    public static void historia() {
         Historias historias = new Historias();
 
         // Llamar a los métodos para mostrar historias
