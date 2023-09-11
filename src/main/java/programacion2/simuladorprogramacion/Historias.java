@@ -31,7 +31,7 @@ public class Historias {
         String[] historiasTierra = {
             "Al frente tuyo se encuentra la isla más grande del archipielago. Su inmensidad genera asombro por la gran cantidad de flora y fauna.",
             "El cielo resplandece alrededor de la gran isla a la que avistas. Nubes blancas crean un gran contraste al celeste del cielo",
-            "",
+            "dedo",
         };
 
         int indice = random.nextInt(historiasTierra.length);
@@ -40,7 +40,7 @@ public class Historias {
     
     public String MostrarHistoriaTierraIzquierda(){
         String [] historiasTierraIzquierda = {
-        "Sexo"
+        "dedo"
         };
         
         int indice = random.nextInt(historiasTierraIzquierda.length);
@@ -57,7 +57,7 @@ public class Historias {
     
         public String MostrarHistoriaTierraDerecha(){
         String [] historiasTierraDerecha = {
-        "Culo"
+        "dedos"
         };
         
         int indice = random.nextInt(historiasTierraDerecha.length);

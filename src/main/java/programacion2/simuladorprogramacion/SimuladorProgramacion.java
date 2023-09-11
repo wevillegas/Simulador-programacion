@@ -35,7 +35,7 @@ public class SimuladorProgramacion {
             ArrayList<FloraAcuatica> FlorAgua = CreacionFloraAcuatica.generadorFloresAcuaticas();
 
             // ---------- INTRODUCCION AL SIMULADOR] ----------
-            System.out.println("------------------------------------------------------------------------------------------------");
+            System.out.println("---------------------------------------------------------------------------------------------------------");
             System.out.println("Bienvenido, usted se encuentra parado en un mirador dentro de una isla en medio de un archipielago \n"
                     + "con el objetivo de poder avistar la diversa flora y fauna de la zona. \n"
                     + "En frente de ti hay una isla grande, y puedes ver las otras islas a la izquierda y a la derecha. \n"
@@ -44,7 +44,7 @@ public class SimuladorProgramacion {
                     + "Es como si fueras un explorador, descubriendo todas las cosas geniales que hay en esta área.");
             /*Este primer do { es para que vuelva a preguntar la dirección a observar en el simulador*/
             do {
-            System.out.println("-------------------------------------------------------------------------------------------------");
+            System.out.println("----------------------------------------------------------------------------------------------------------");
             System.out.println("¿Hacia que direccion le gustaria mirar?");
             System.out.println("Ingrese entre las siguientes opciones: ");
                 System.out.println("\t- abajo");
@@ -72,7 +72,7 @@ public class SimuladorProgramacion {
                         entradaValida = true;
                         break;
                     default:
-                        System.out.println("-------------------------------------------------------------------------------------------------");
+                        System.out.println("----------------------------------------------------------------------------------------------------------");
                         System.out.println("Palabra invalida, ¿hacia que direccion le gustaria mirar?");
                         break;
                 }
@@ -82,9 +82,9 @@ public class SimuladorProgramacion {
             switch (opcionMin) {
 
                 case "abajo":
-                    
-                    // mostrando historia abajo
-                    System.out.println("Historia de Agua: " + historiaAgua);
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
+                    // muestra historia abajo
+                    System.out.println(historiaAgua);
                     /*mismo caso que el de arriba solo que se hace en cada case del switch*/
                     do {
                     // ---------- [ANIMALES] ----------
@@ -100,13 +100,12 @@ public class SimuladorProgramacion {
                         // asigno un animal a cada espacio del array
                         animalesAcuaticosAvistados[i] = animal;
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
-                    System.out.println("Decides mirar al mar que se encuentra debajo de ti, allí avistas a los siguientes animales");
+                    System.out.println("En el mar puedes avistar a los siguientes animales:\n");
                     for (int i = 0; i < cantidadRandomAgua; i++) {
-                        System.out.println(animalesAcuaticosAvistados[i].getRaza());
+                        System.out.println("- "+animalesAcuaticosAvistados[i].getRaza());
                     }
                     /*Pregunto si quiere analizar un animal o saltear el proceso*/
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("Quiere ver con detenimiento algún animal? Escriba el nombre del animal");
                     System.out.println("o ... escriba \"no\" si desea saltear este proceso");
                     String animalAbajo;
@@ -125,14 +124,15 @@ public class SimuladorProgramacion {
                         // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
                         for (int i = 0; i < cantidadRandomAgua; i++) {
                             if (animalesAcuaticosAvistados[i].getRaza().equalsIgnoreCase(animalAbajo) && !banderaAnimalAVerAcu) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
                                 // imprimo todos los datos
-                                System.out.println("El animal que observas detalladamente es un/a " + animalesAcuaticosAvistados[i].getRaza());
+                                System.out.println("\n\t------------ " +animalesAcuaticosAvistados[i].getRaza()+" ------------\n");
+                                System.out.println("Animal: " +animalesAcuaticosAvistados[i].getRaza());
                                 System.out.println("Especie: " + animalesAcuaticosAvistados[i].getEspecie());
                                 System.out.println("Alimentacion: " + animalesAcuaticosAvistados[i].getAlimentacion());
                                 System.out.println("Color: " + animalesAcuaticosAvistados[i].getColor());
                                 System.out.println("Tamaño aproximado: " + animalesAcuaticosAvistados[i].getTamanio() + "cm");
-                                System.out.println("Respiracion: " + animalesAcuaticosAvistados[i].getRespiracion());
+                                System.out.println("Respiracion: " + animalesAcuaticosAvistados[i].getRespiracion()+"\n");
                                 // paso la bandera a true para q no se repita el animal
                                 banderaAnimalAVerAcu = true;
                                 // paso la bandera a true para validar la palabra escrita por el usuario
@@ -141,44 +141,45 @@ public class SimuladorProgramacion {
                         }
                         // si la palabra no es correcta, se mandará este mensaje
                         if (!banderaValidacionAnimalAcu) {
-                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            System.out.println("----------------------------------------------------------------------------------------------------------");
                             System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
                             animalAbajo = scanner.nextLine();
                         }
                     }
                     it++;
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
-                    System.out.println("Tambien puedes ver a las siguientes plantas acuaticas");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
+                    System.out.println("Tambien puedes ver a las siguientes plantas acuaticas:\n");
                     for (int i = 0; i < FlorAgua.size(); i++) {
                         
                         FloraAcuatica florAgua = FlorAgua.get(i);
-                        System.out.println(florAgua.getEspecie());
+                        System.out.println("- "+florAgua.getEspecie());
                         
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
-                    System.out.println("Quiere ver con detenimiento alguna planta ? Escriba el nombre de la planta");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
+                    System.out.println("Quiere ver con detenimiento alguna planta? Escriba el nombre de la planta");
                     System.out.println("o ... escriba \"no\" si desea saltear este proceso");
                     String florAcuatica;
                     florAcuatica = scanner.nextLine();
-                    int itaf = 0;
+                    int itaf = 0; /*itaf (iteración arboles o flores)*/
                     while(!florAcuatica.equalsIgnoreCase("no")&& itaf<=0){
                     boolean banderaValidacionArbol = false;
                     while (!banderaValidacionArbol) {
                         for (int i = 0; i < FlorAgua.size(); i++) {                           
                             if (FlorAgua.get(i).getEspecie().equalsIgnoreCase(florAcuatica)) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
-                                System.out.println("La flor que observas detalladamente es un/a " + FlorAgua.get(i).getEspecie());
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
+                                System.out.println("\n\t------------ " + FlorAgua.get(i).getEspecie()+" ------------\n");
+                                System.out.println("Flor: "+ FlorAgua.get(i).getEspecie());
                                 System.out.println("Color: " + FlorAgua.get(i).getColor());
                                 System.out.println("Nombre cientifico: " + FlorAgua.get(i).getTipo());
                                 System.out.println("Habitat: " + FlorAgua.get(i).getHabitat());
                                 System.out.println("Tamaño aproximado: " + FlorAgua.get(i).getTamanio() + "cm");
-                                System.out.println("Tipo: " + FlorAgua.get(i).getTipoAgua());
+                                System.out.println("Tipo: " + FlorAgua.get(i).getTipoAgua()+"\n");
                                 banderaValidacionArbol = true;
                             }
                         }
                         if (!banderaValidacionArbol) {
-                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            System.out.println("----------------------------------------------------------------------------------------------------------");
                             System.out.println("Esa planta no esta siendo avistada. Escoja una planta que tenga a la vista para analizarla");
                             florAcuatica = scanner.nextLine();
                         }
@@ -186,16 +187,17 @@ public class SimuladorProgramacion {
                     itaf++; /*itaf (iteración arboles o flores)*/
                     }
                     
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("¿Quiere volver a analizar el entorno? (presione \"si\" en caso afirmativo)");
                     respuesta = scanner.nextLine();
                     } while (respuesta.equalsIgnoreCase("si"));
                     break;
                     
                 case "arriba":
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     
-                    // Mostrando Historia aire
-                    System.out.println("Historia de Aire: " + historiaAire);
+                    // Muestra Historia arriba
+                    System.out.println(historiaAire);
                                         
                     do {
                     // ---------- [ANIMALES] ----------
@@ -210,12 +212,10 @@ public class SimuladorProgramacion {
                         AnimalesAereos animal = Aire.get(indiceAleatorioAire);
                         animalesAereosAvistados[i] = animal;
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
-                    System.out.println("Decides levantar la cabeza para ver el cielo, allí avistas a los siguientes animales");
+                    System.out.println("Decides ver el cielo, allí avistas a los siguientes animales:\n");
                     for (int i = 0; i < cantidadRandomAire; i++) {
-                        System.out.println(animalesAereosAvistados[i].getRaza());
+                        System.out.println("- "+animalesAereosAvistados[i].getRaza());
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
                     System.out.println("Quiere ver con detenimiento algún animal? Escriba el nombre del animal)");
                     System.out.println("o ... escriba \"no\" si desea saltear este proceso");
                     String animalArriba;
@@ -233,15 +233,16 @@ public class SimuladorProgramacion {
                         // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
                         for (int i = 0; i < cantidadRandomAire; i++) {
                             if (animalesAereosAvistados[i].getRaza().equalsIgnoreCase(animalArriba) && !banderaAnimalAVerAire) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
                                 // imprimo todos los datos
-                                System.out.println("El animal que observas detalladamente es un/a " + animalesAereosAvistados[i].getRaza());
+                                System.out.println("\n\t------------ "+ animalesAereosAvistados[i].getRaza()+" ------------\n");
+                                System.out.println("Animal: "+ animalesAereosAvistados[i].getRaza());
                                 System.out.println("Especie: " + animalesAereosAvistados[i].getEspecie());
                                 System.out.println("Alimentacion: " + animalesAereosAvistados[i].getAlimentacion());
                                 System.out.println("Color: " + animalesAereosAvistados[i].getColor());
                                 System.out.println("Tamaño aproximado " + animalesAereosAvistados[i].getTamanio() + "cm");
                                 System.out.println("Tamaño de alas aproximado: " + animalesAereosAvistados[i].getTamanioAlas() + "cm");
-                                System.out.println("Tamaño de pico aproximado " + animalesAereosAvistados[i].getTamanioPico() + "cm");
+                                System.out.println("Tamaño de pico aproximado " + animalesAereosAvistados[i].getTamanioPico() + "cm\n");
                                 // paso la bandera a true para q no se repita el animal
                                 banderaAnimalAVerAire = true;
                                 // paso la bandera a true para validar la palabra escrita por el usuario
@@ -250,21 +251,22 @@ public class SimuladorProgramacion {
                         }
                         // si la palabra no es correcta, se mandará este mensaje
                         if (!banderaValidacionAnimalAire) {
-                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            System.out.println("----------------------------------------------------------------------------------------------------------");
                             System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
                             animalArriba = scanner.nextLine();
                         }
                     }
                     it++;
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("¿Quiere volver a analizar el entorno? (presione \"si\" en caso afirmativo)");
                     respuesta = scanner.nextLine();
                     } while (respuesta.equalsIgnoreCase("si"));
                     break;
                 case "adelante":
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     // Mostrando historia tierra
-                    System.out.println("Historia de Tierra: " + historiaTierra);            
+                    System.out.println(historiaTierra);            
                     do {
                     // ---------- [ANIMALES] ----------
                     //cantidad random de animales terrestres que apareceran
@@ -278,12 +280,11 @@ public class SimuladorProgramacion {
                         AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierra);
                         animalesTerrestresAvistados[i] = animal;
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
-                    System.out.println("Decides mirar adelante, donde se encuentra la isla más grande del archipielago, allí avistas a los siguientes animales");
+                    System.out.println("Ves hacia donde se encuentra la isla más grande del archipielago, allí avistas a los siguientes animales:\n");
                     for (int i = 0; i < cantidadRandomTierra; i++) {
-                        System.out.println(animalesTerrestresAvistados[i].getRaza());
+                        System.out.println("- "+animalesTerrestresAvistados[i].getRaza());
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("Quiere ver con detenimiento algún animal? Escriba el nombre del animal)");
                     System.out.println("o ... escriba \"no\" si desea saltear este proceso");
                     String animalAdelante;
@@ -301,14 +302,15 @@ public class SimuladorProgramacion {
                         // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
                         for (int i = 0; i < cantidadRandomTierra; i++) {
                             if (animalesTerrestresAvistados[i].getRaza().equalsIgnoreCase(animalAdelante) && !banderaAnimalAVerTierra) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
                                 // imprimo todos los datos
-                                System.out.println("El animal que observas detalladamente es un/a " + animalesTerrestresAvistados[i].getRaza());
+                                System.out.println("\n\t------------ "+ animalesTerrestresAvistados[i].getRaza()+" ------------\n");
+                                System.out.println("Animal: "+ animalesTerrestresAvistados[i].getRaza());
                                 System.out.println("Especie: " + animalesTerrestresAvistados[i].getEspecie());
                                 System.out.println("Alimentacion: " + animalesTerrestresAvistados[i].getAlimentacion());
                                 System.out.println("Color: " + animalesTerrestresAvistados[i].getColor());
                                 System.out.println("Tamaño aproximado: " + animalesTerrestresAvistados[i].getTamanio() + "cm");
-                                System.out.println("Clasificacion: " + animalesTerrestresAvistados[i].getClasificacion());
+                                System.out.println("Clasificacion: " + animalesTerrestresAvistados[i].getClasificacion()+"\n");
                                 // paso la bandera a true para q no se repita el animal
                                 banderaAnimalAVerTierra = true;
                                 // paso la bandera a true para validar la palabra escrita por el usuario
@@ -317,7 +319,7 @@ public class SimuladorProgramacion {
                         }
                         // si la palabra no es correcta, se mandará este mensaje
                         if (!banderaValidacionAnimalTierra) {
-                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            System.out.println("----------------------------------------------------------------------------------------------------------");
                             System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
                             animalAdelante = scanner.nextLine();
                         }
@@ -343,63 +345,65 @@ public class SimuladorProgramacion {
                         floresAvistadas[i] = flor;
                     }
 
-                    System.out.println("-------------------------------------------------------------------------------------------------");
-                    System.out.println("Tambien puedes ver a las siguientes plantas");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
+                    System.out.println("Tambien puedes ver a las siguientes plantas:\n");
                     for (int i = 0; i < arbolesAvistados.length; i++) {
-                        System.out.println(arbolesAvistados[i].getEspecie());
+                        System.out.println("- "+arbolesAvistados[i].getEspecie());
                     }
                     for (int i = 0; i < floresAvistadas.length; i++) {
-                        System.out.println(floresAvistadas[i].getEspecie());
+                        System.out.println("- "+floresAvistadas[i].getEspecie());
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("Quiere ver con detenimiento algún árbol o flor? Escriba el nombre de la planta");
                     System.out.println("o ... escriba \"no\" si desea saltear este proceso");
                     String plantaAdelante;
                     plantaAdelante = scanner.nextLine();
-                    int itaf = 0;
+                    int itaf = 0; /*itaf (iteración arboles o flores)*/
                     while(!plantaAdelante.equalsIgnoreCase("no")&& itaf<=0){
                     boolean banderaValidacionArbol = false;
                     while (!banderaValidacionArbol) {
                         for (int i = 0; i < arbolesAvistados.length; i++) {
                             if (arbolesAvistados[i].getEspecie().equalsIgnoreCase(plantaAdelante)) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
-                                System.out.println("El árbol que observas detalladamente es un/a " + arbolesAvistados[i].getEspecie());
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
+                                System.out.println("\n\t------------ "+ arbolesAvistados[i].getEspecie()+" ------------\n");
+                                System.out.println("Arbol: "+ arbolesAvistados[i].getEspecie());
                                 System.out.println("Color: " + arbolesAvistados[i].getColor());
                                 System.out.println("Nombre cientifico: " + arbolesAvistados[i].getTipo());
                                 System.out.println("Habitat:" + arbolesAvistados[i].getHabitat());
                                 System.out.println("Tamaño aproximado: " + arbolesAvistados[i].getTamanio() + "m");
                                 System.out.println("Hojas: " + arbolesAvistados[i].getHojas());
-                                System.out.println("Fruto: " + arbolesAvistados[i].getFruto());
+                                System.out.println("Fruto: " + arbolesAvistados[i].getFruto()+"\n");
                                 banderaValidacionArbol = true;
                             }
                             if (floresAvistadas[i].getEspecie().equalsIgnoreCase(plantaAdelante)) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
-                                System.out.println("La flor que observas detalladamente es un/a " + floresAvistadas[i].getEspecie());
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
+                                System.out.println("\n\t------------ "+ floresAvistadas[i].getEspecie()+" ------------\n");
+                                System.out.println("Flor: "+ floresAvistadas[i].getEspecie());
                                 System.out.println("Color: " + floresAvistadas[i].getColor());
                                 System.out.println("Nombre cientifico: " + floresAvistadas[i].getTipo());
                                 System.out.println("Habitat: " + floresAvistadas[i].getHabitat());
                                 System.out.println("Tamaño aproximado: " + floresAvistadas[i].getTamanio() + "cm");
-                                System.out.println("Petalos: " + floresAvistadas[i].getPetalos());
+                                System.out.println("Petalos: " + floresAvistadas[i].getPetalos()+"\n");
                                 banderaValidacionArbol = true;
                             }
                         }
                         if (!banderaValidacionArbol) {
-                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            System.out.println("----------------------------------------------------------------------------------------------------------");
                             System.out.println("Esa planta no esta siendo avistada. Escoja una planta que tenga a la vista para analizarla");
                             plantaAdelante = scanner.nextLine();
                         }
                     }
                     itaf++; /*itaf (iteración arboles o flores)*/
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("¿Quiere volver a analizar el entorno? (presione \"si\" en caso afirmativo)");
                     respuesta = scanner.nextLine();
                     } while (respuesta.equalsIgnoreCase("si"));
                     break;
                 case "izquierda":
-                    
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     // Mostrando historia tierra
-                    System.out.println("Historia de Tierra: " + historiaTierraIzquierda);
+                    System.out.println(historiaTierraIzquierda);
                                     
                     do {
                     //cantidad random de animales terrestres que apareceran
@@ -413,12 +417,11 @@ public class SimuladorProgramacion {
                         AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierraIzq);
                         animalesTerrestresAvistadosIzq[i] = animal;
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
-                    System.out.println("Decides mirar hacia la izquierda, donde se encuentra una de las grandes islas del archipielago, allí avistas a los siguientes animales");
+                    System.out.println("Miras hacia donde se encuentra una de las grandes islas del archipielago, allí avistas a los siguientes animales:\n");
                     for (int i = 0; i < cantidadRandomTierraIzq; i++) {
-                        System.out.println(animalesTerrestresAvistadosIzq[i].getRaza());
+                        System.out.println("- "+animalesTerrestresAvistadosIzq[i].getRaza());
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("Quiere ver con detenimiento algún animal? Escriba el nombre del animal");
                     System.out.println("o ... escriba \"no\" si desea saltear este proceso");
                     String animalIzquierda;
@@ -435,14 +438,15 @@ public class SimuladorProgramacion {
                         // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
                         for (int i = 0; i < cantidadRandomTierraIzq; i++) {
                             if (animalesTerrestresAvistadosIzq[i].getRaza().equalsIgnoreCase(animalIzquierda) && !banderaAnimalAVerTierraIzq) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
                                 // imprimo todos los datos
-                                System.out.println("El animal que observas detalladamente es un/a " + animalesTerrestresAvistadosIzq[i].getRaza());
+                                System.out.println("\n\t------------ "+ animalesTerrestresAvistadosIzq[i].getRaza()+" ------------\n");
+                                System.out.println("Animal: "+ animalesTerrestresAvistadosIzq[i].getRaza());
                                 System.out.println("Especie: " + animalesTerrestresAvistadosIzq[i].getEspecie());
                                 System.out.println("Alimentacion: " + animalesTerrestresAvistadosIzq[i].getAlimentacion());
                                 System.out.println("Color: " + animalesTerrestresAvistadosIzq[i].getColor());
                                 System.out.println("Tamaño aproximado: " + animalesTerrestresAvistadosIzq[i].getTamanio() + "cm");
-                                System.out.println("Clasificacion: " + animalesTerrestresAvistadosIzq[i].getClasificacion());
+                                System.out.println("Clasificacion: " + animalesTerrestresAvistadosIzq[i].getClasificacion()+"\n");
                                 // paso la bandera a true para q no se repita el animal
                                 banderaAnimalAVerTierraIzq = true;
                                 // paso la bandera a true para validar la palabra escrita por el usuario
@@ -451,7 +455,7 @@ public class SimuladorProgramacion {
                         }
                         // si la palabra no es correcta, se mandará este mensaje
                         if (!banderaValidacionAnimalTierraIzq) {
-                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            System.out.println("----------------------------------------------------------------------------------------------------------");
                             System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
                             animalIzquierda = scanner.nextLine();
                         }
@@ -476,63 +480,65 @@ public class SimuladorProgramacion {
                         floresAvistadasIzq[i] = flor;
                     }
 
-                    System.out.println("-------------------------------------------------------------------------------------------------");
-                    System.out.println("Tambien ves a las siguientes plantas");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
+                    System.out.println("Tambien ves a las siguientes plantas:\n");
                     for (int i = 0; i < arbolesAvistadosIzq.length; i++) {
-                        System.out.println(arbolesAvistadosIzq[i].getEspecie());
+                        System.out.println("- "+arbolesAvistadosIzq[i].getEspecie());
                     }
                     for (int i = 0; i < floresAvistadasIzq.length; i++) {
-                        System.out.println(floresAvistadasIzq[i].getEspecie());
+                        System.out.println("- "+floresAvistadasIzq[i].getEspecie());
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("Quiere ver con detenimiento algún árbol o flor? Escriba el nombre de la planta");
                     System.out.println("o ... escriba \"no\" si desea saltear este proceso");
                     String plantaIzquierda;
                     plantaIzquierda = scanner.nextLine();
-                    int itaf = 0;
+                    int itaf = 0; /*itaf (iteración arboles o flores)*/
                     while(!plantaIzquierda.equalsIgnoreCase("no")&& itaf<=0){
                     boolean banderaValidacionArbolIzq = false;
                     while (!banderaValidacionArbolIzq) {
                         for (int i = 0; i < arbolesAvistadosIzq.length; i++) {
                             if (arbolesAvistadosIzq[i].getEspecie().equalsIgnoreCase(plantaIzquierda)) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
-                                System.out.println("El arbol que observas detalladamente es un/a " + arbolesAvistadosIzq[i].getEspecie());
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
+                                System.out.println("\n\t------------ "+ arbolesAvistadosIzq[i].getEspecie()+" ------------\n");
+                                System.out.println("Arbol: "+ arbolesAvistadosIzq[i].getEspecie());
                                 System.out.println("Color: " + arbolesAvistadosIzq[i].getColor());
                                 System.out.println("Nombre cientifico: " + arbolesAvistadosIzq[i].getTipo());
                                 System.out.println("Habitat:" + arbolesAvistadosIzq[i].getHabitat());
                                 System.out.println("Tamaño aproximado: " + arbolesAvistadosIzq[i].getTamanio() + "m");
                                 System.out.println("Hojas: " + arbolesAvistadosIzq[i].getHojas());
-                                System.out.println("Fruto: " + arbolesAvistadosIzq[i].getFruto());
+                                System.out.println("Fruto: " + arbolesAvistadosIzq[i].getFruto()+"\n");
                                 banderaValidacionArbolIzq = true;
                             }
                             if (floresAvistadasIzq[i].getEspecie().equalsIgnoreCase(plantaIzquierda)) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
-                                System.out.println("La flor que observas detalladamente es un/a " + floresAvistadasIzq[i].getEspecie());
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
+                                System.out.println("\n\t------------ "+ floresAvistadasIzq[i].getEspecie()+" ------------\n");
+                                System.out.println("Flor: " + floresAvistadasIzq[i].getEspecie());
                                 System.out.println("Color: " + floresAvistadasIzq[i].getColor());
                                 System.out.println("Nombre cientifico: " + floresAvistadasIzq[i].getTipo());
                                 System.out.println("Habitat: " + floresAvistadasIzq[i].getHabitat());
                                 System.out.println("Tamaño aproximado: " + floresAvistadasIzq[i].getTamanio() + "cm");
-                                System.out.println("Petalos: " + floresAvistadasIzq[i].getPetalos());
+                                System.out.println("Petalos: " + floresAvistadasIzq[i].getPetalos()+"\n");
                                 banderaValidacionArbolIzq = true;
                             }
                         }
                         if (!banderaValidacionArbolIzq) {
-                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            System.out.println("----------------------------------------------------------------------------------------------------------");
                             System.out.println("Esa planta no esta siendo avistada. Escoja una planta que tenga a la vista para analizarla");
                             plantaIzquierda = scanner.nextLine();
                         }
                     }
-                    itaf++;
+                    itaf++; /*itaf (iteración arboles o flores)*/
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("¿Quiere volver a analizar el entorno? (presione \"si\" en caso afirmativo)");
                     respuesta = scanner.nextLine();
                     } while (respuesta.equalsIgnoreCase("si"));
                     break;
                 case "derecha":
-                                 
+                System.out.println("----------------------------------------------------------------------------------------------------------");                 
                     // Mostrando historia tierra
-                    System.out.println("Historia de Tierra: " + historiaTierraDerecha);
+                    System.out.println(historiaTierraDerecha);
                     
                     do {
                     //cantidad random de animales terrestres que apareceran
@@ -546,12 +552,11 @@ public class SimuladorProgramacion {
                         AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierraDer);
                         animalesTerrestresAvistadosDer[i] = animal;
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
-                    System.out.println("Decides mirar hacia la derecha, donde se encuentra una de las grandes islas del archipielago, allí avistas a los siguientes animales y plantas");
+                    System.out.println("Miras hacia donde se encuentra una de las grandes islas del archipielago, allí avistas a los siguientes animales:\n");
                     for (int i = 0; i < cantidadRandomTierraDer; i++) {
-                        System.out.println(animalesTerrestresAvistadosDer[i].getRaza());
+                        System.out.println("- "+animalesTerrestresAvistadosDer[i].getRaza());
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("Quiere ver con detenimiento algún animal? Escriba el nombre del animal");
                     System.out.println("o ... escriba \"no\" si desea saltear este proceso");
                     String animalDerecha;
@@ -569,14 +574,15 @@ public class SimuladorProgramacion {
                         // bucle que buscara el animal elegido por raza para mostrar asi todas sus caracteristicas
                         for (int i = 0; i < cantidadRandomTierraDer; i++) {
                             if (animalesTerrestresAvistadosDer[i].getRaza().equalsIgnoreCase(animalDerecha) && !banderaAnimalAVerTierraDer) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
                                 // imprimo todos los datos
-                                System.out.println("El animal que observas detalladamente es un/a " + animalesTerrestresAvistadosDer[i].getRaza());
+                                System.out.println("\n\t------------ "+ animalesTerrestresAvistadosDer[i].getRaza()+" ------------\n");
+                                System.out.println("Animal: "+ animalesTerrestresAvistadosDer[i].getRaza());
                                 System.out.println("Especie: " + animalesTerrestresAvistadosDer[i].getEspecie());
                                 System.out.println("Alimentacion: " + animalesTerrestresAvistadosDer[i].getAlimentacion());
                                 System.out.println("Color: " + animalesTerrestresAvistadosDer[i].getColor());
                                 System.out.println("Tamaño aproximado: " + animalesTerrestresAvistadosDer[i].getTamanio() + "cm");
-                                System.out.println("Clasificacion: " + animalesTerrestresAvistadosDer[i].getClasificacion());
+                                System.out.println("Clasificacion: " + animalesTerrestresAvistadosDer[i].getClasificacion()+"\n");
                                 // paso la bandera a true para q no se repita el animal
                                 banderaAnimalAVerTierraDer = true;
                                 // paso la bandera a true para validar la palabra escrita por el usuario
@@ -585,7 +591,7 @@ public class SimuladorProgramacion {
                         }
                         // si la palabra no es correcta, se mandará este mensaje
                         if (!banderaValidacionAnimalTierraDer) {
-                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            System.out.println("----------------------------------------------------------------------------------------------------------");
                             System.out.println("Ese animal no esta siendo avistado. Escoja un animal que tenga a la vista para analizarlo");
                             animalDerecha = scanner.nextLine();
                         }
@@ -611,55 +617,57 @@ public class SimuladorProgramacion {
                         floresAvistadasDer[i] = flor;
                     }
 
-                    System.out.println("-------------------------------------------------------------------------------------------------");
-                    System.out.println("Tambien ves a las siguientes plantas");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
+                    System.out.println("Tambien ves a las siguientes plantas:\n");
                     for (int i = 0; i < arbolesAvistadosDer.length; i++) {
-                        System.out.println(arbolesAvistadosDer[i].getEspecie());
+                        System.out.println("- "+arbolesAvistadosDer[i].getEspecie());
                     }
                     for (int i = 0; i < floresAvistadasDer.length; i++) {
-                        System.out.println(floresAvistadasDer[i].getEspecie());
+                        System.out.println("- "+floresAvistadasDer[i].getEspecie());
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("Quiere ver con detenimiento algún árbol o flor? Escriba el nombre de la planta");
                     System.out.println("o ... escriba \"no\" si desea saltear este proceso");
                     String plantaDerecha;
                     plantaDerecha = scanner.nextLine();
-                    int itaf = 0;
+                    int itaf = 0; /*itaf (iteración arboles o flores)*/
                     while(!plantaDerecha.equalsIgnoreCase("no") && itaf <= 0){
                     boolean banderaValidacionArbolDer = false;
                     while (!banderaValidacionArbolDer) {
                         for (int i = 0; i < arbolesAvistadosDer.length; i++) {
                             if (arbolesAvistadosDer[i].getEspecie().equalsIgnoreCase(plantaDerecha)) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
-                                System.out.println("El arbol que observas detalladamente es un/a " + arbolesAvistadosDer[i].getEspecie());
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
+                                System.out.println("\n\t------------ "+ arbolesAvistadosDer[i].getEspecie()+" ------------\n");
+                                System.out.println("Arbol: " + arbolesAvistadosDer[i].getEspecie());
                                 System.out.println("Color: " + arbolesAvistadosDer[i].getColor());
                                 System.out.println("Nombre cientifico: " + arbolesAvistadosDer[i].getTipo());
                                 System.out.println("Habitat:" + arbolesAvistadosDer[i].getHabitat());
                                 System.out.println("Tamaño aproximado: " + arbolesAvistadosDer[i].getTamanio() + "m");
                                 System.out.println("Hojas: " + arbolesAvistadosDer[i].getHojas());
-                                System.out.println("Fruto: " + arbolesAvistadosDer[i].getFruto());
+                                System.out.println("Fruto: " + arbolesAvistadosDer[i].getFruto()+"\n");
                                 banderaValidacionArbolDer = true;
                             }
                             if (floresAvistadasDer[i].getEspecie().equalsIgnoreCase(plantaDerecha)) {
-                                System.out.println("-------------------------------------------------------------------------------------------------");
-                                System.out.println("La flor que observas detalladamente es un/a " + floresAvistadasDer[i].getEspecie());
+                                System.out.println("----------------------------------------------------------------------------------------------------------");
+                                System.out.println("\n\t------------ " + floresAvistadasDer[i].getEspecie()+" ------------\n");
+                                System.out.println("Flor: "+ floresAvistadasDer[i].getEspecie());
                                 System.out.println("Color: " + floresAvistadasDer[i].getColor());
                                 System.out.println("Nombre cientifico: " + floresAvistadasDer[i].getTipo());
                                 System.out.println("Habitat: " + floresAvistadasDer[i].getHabitat());
                                 System.out.println("Tamaño aproximado: " + floresAvistadasDer[i].getTamanio() + "cm");
-                                System.out.println("Petalos: " + floresAvistadasDer[i].getPetalos());
+                                System.out.println("Petalos: " + floresAvistadasDer[i].getPetalos()+"\n");
                                 banderaValidacionArbolDer = true;
                             }
                         }
                         if (!banderaValidacionArbolDer) {
-                            System.out.println("-------------------------------------------------------------------------------------------------");
+                            System.out.println("----------------------------------------------------------------------------------------------------------");
                             System.out.println("Esa planta no esta siendo avistada. Escoja una planta que tenga a la vista para analizarla");
                             plantaDerecha = scanner.nextLine();
                         }
                     }
-                    itaf++;
+                    itaf++; /*itaf (iteración arboles o flores)*/
                     }
-                    System.out.println("-------------------------------------------------------------------------------------------------");
+                    System.out.println("----------------------------------------------------------------------------------------------------------");
                     System.out.println("¿Quiere volver a analizar el entorno? (presione \"si\" en caso afirmativo)");
                     respuesta = scanner.nextLine();
                     } while (respuesta.equalsIgnoreCase("si"));
@@ -669,7 +677,7 @@ public class SimuladorProgramacion {
                     break;
             }
 
-            System.out.println("-------------------------------------------------------------------------------------------------");
+            System.out.println("----------------------------------------------------------------------------------------------------------");
             System.out.println("Quiere volver a la posición inicial? (escriba 'si' para volver hasta allí)");
             respuesta = scanner.nextLine();
         } while (respuesta.equalsIgnoreCase("si"));
