@@ -4,6 +4,7 @@ package programacion2.simuladorprogramacion;
 import java.util.ArrayList;
 
 public class CreacionAire {
+    
     public static ArrayList<AnimalesAereos> generadorAire() {
         ArrayList<AnimalesAereos> Aire = new ArrayList<>();
         // Animales Aereos

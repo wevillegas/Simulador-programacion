@@ -100,7 +100,7 @@ public class SimuladorProgramacion {
                         // asigno un animal a cada espacio del array
                         animalesAcuaticosAvistados[i] = animal;
                     }
-                    System.out.println("En el mar puedes avistar a los siguientes animales:\n");
+                    System.out.println("En el mar avistas a los siguientes animales:\n");
                     for (int i = 0; i < cantidadRandomAgua; i++) {
                         System.out.println("- "+animalesAcuaticosAvistados[i].getRaza());
                     }
@@ -212,7 +212,7 @@ public class SimuladorProgramacion {
                         AnimalesAereos animal = Aire.get(indiceAleatorioAire);
                         animalesAereosAvistados[i] = animal;
                     }
-                    System.out.println("Decides ver el cielo, allí avistas a los siguientes animales:\n");
+                    System.out.println("En el cielo avistas a los siguientes animales:\n");
                     for (int i = 0; i < cantidadRandomAire; i++) {
                         System.out.println("- "+animalesAereosAvistados[i].getRaza());
                     }
@@ -263,9 +263,10 @@ public class SimuladorProgramacion {
                     respuesta = scanner.nextLine();
                     } while (respuesta.equalsIgnoreCase("si"));
                     break;
+                    
                 case "adelante":
                     System.out.println("----------------------------------------------------------------------------------------------------------");
-                    // Mostrando historia tierra
+                    // Muestra historia tierra adelante
                     System.out.println(historiaTierra);            
                     do {
                     // ---------- [ANIMALES] ----------
@@ -280,7 +281,7 @@ public class SimuladorProgramacion {
                         AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierra);
                         animalesTerrestresAvistados[i] = animal;
                     }
-                    System.out.println("Ves hacia donde se encuentra la isla más grande del archipielago, allí avistas a los siguientes animales:\n");
+                    System.out.println("En la isla de adelante avistas a los siguientes animales:\n");
                     for (int i = 0; i < cantidadRandomTierra; i++) {
                         System.out.println("- "+animalesTerrestresAvistados[i].getRaza());
                     }
@@ -402,7 +403,7 @@ public class SimuladorProgramacion {
                     break;
                 case "izquierda":
                     System.out.println("----------------------------------------------------------------------------------------------------------");
-                    // Mostrando historia tierra
+                    // Muestra historia tierra izquierda
                     System.out.println(historiaTierraIzquierda);
                                     
                     do {
@@ -417,7 +418,7 @@ public class SimuladorProgramacion {
                         AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierraIzq);
                         animalesTerrestresAvistadosIzq[i] = animal;
                     }
-                    System.out.println("Miras hacia donde se encuentra una de las grandes islas del archipielago, allí avistas a los siguientes animales:\n");
+                    System.out.println("En la isla de la izquierda avistas a los siguientes animales:\n");
                     for (int i = 0; i < cantidadRandomTierraIzq; i++) {
                         System.out.println("- "+animalesTerrestresAvistadosIzq[i].getRaza());
                     }
@@ -537,7 +538,7 @@ public class SimuladorProgramacion {
                     break;
                 case "derecha":
                 System.out.println("----------------------------------------------------------------------------------------------------------");                 
-                    // Mostrando historia tierra
+                    // Muestra historia tierra derecha
                     System.out.println(historiaTierraDerecha);
                     
                     do {
@@ -552,7 +553,7 @@ public class SimuladorProgramacion {
                         AnimalesTerrestres animal = Tierra.get(indiceAleatorioTierraDer);
                         animalesTerrestresAvistadosDer[i] = animal;
                     }
-                    System.out.println("Miras hacia donde se encuentra una de las grandes islas del archipielago, allí avistas a los siguientes animales:\n");
+                    System.out.println("En la isla de la derecha avistas a los siguientes animales:\n");
                     for (int i = 0; i < cantidadRandomTierraDer; i++) {
                         System.out.println("- "+animalesTerrestresAvistadosDer[i].getRaza());
                     }
