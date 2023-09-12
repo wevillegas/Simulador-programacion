@@ -11,7 +11,7 @@ public class CreacionTierra {
         AnimalesTerrestres leon = new AnimalesTerrestres( "Mamifero","Panthera leo", "Leon", "Carnivoro", "Amarillo", 200);
         AnimalesTerrestres oso = new AnimalesTerrestres( "Mamifero", "Ailuropoda melanoleuca","Oso", "Omnivoro", "Blanco y negro", 200);
         AnimalesTerrestres lince = new AnimalesTerrestres( "Mamifero","Lynx spp", "Lince", "Carnivoro", "Manchas y rayas", 120);
-        AnimalesTerrestres chimpance = new AnimalesTerrestres("Primate", "Pan troglodytes", "Chimpancé", "Omnivoro", "Negro", 63);
+        AnimalesTerrestres chimpance = new AnimalesTerrestres("Primate", "Pan troglodytes", "Chimpance", "Omnivoro", "Negro", 63);
         AnimalesTerrestres guepardo = new AnimalesTerrestres("Mamifero", "Acinonyx jubatus", "Guepardo", "Carnivoro", "Amarillo", 130);
         AnimalesTerrestres puma = new AnimalesTerrestres("Mamifero", "Felino", "Puma", "Carnivoro", "Marron", 230);
         AnimalesTerrestres tapir = new AnimalesTerrestres("Mamifero", "Tapirus terrestris", "Tapir", "Herbivoro", "Gris", 200);

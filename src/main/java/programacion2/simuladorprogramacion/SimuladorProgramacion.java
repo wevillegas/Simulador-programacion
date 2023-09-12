@@ -240,9 +240,9 @@ public class SimuladorProgramacion {
                                 System.out.println("Especie: " + animalesAereosAvistados[i].getEspecie());
                                 System.out.println("Alimentacion: " + animalesAereosAvistados[i].getAlimentacion());
                                 System.out.println("Color: " + animalesAereosAvistados[i].getColor());
-                                System.out.println("Tamaño aproximado " + animalesAereosAvistados[i].getTamanio() + "cm");
+                                System.out.println("Tamaño aproximado: " + animalesAereosAvistados[i].getTamanio() + "cm");
                                 System.out.println("Tamaño de alas aproximado: " + animalesAereosAvistados[i].getTamanioAlas() + "cm");
-                                System.out.println("Tamaño de pico aproximado " + animalesAereosAvistados[i].getTamanioPico() + "cm\n");
+                                System.out.println("Tamaño de pico aproximado: " + animalesAereosAvistados[i].getTamanioPico() + "cm\n");
                                 // paso la bandera a true para q no se repita el animal
                                 banderaAnimalAVerAire = true;
                                 // paso la bandera a true para validar la palabra escrita por el usuario
@@ -370,7 +370,7 @@ public class SimuladorProgramacion {
                                 System.out.println("Arbol: "+ arbolesAvistados[i].getEspecie());
                                 System.out.println("Color: " + arbolesAvistados[i].getColor());
                                 System.out.println("Nombre cientifico: " + arbolesAvistados[i].getTipo());
-                                System.out.println("Habitat:" + arbolesAvistados[i].getHabitat());
+                                System.out.println("Habitat: " + arbolesAvistados[i].getHabitat());
                                 System.out.println("Tamaño aproximado: " + arbolesAvistados[i].getTamanio() + "m");
                                 System.out.println("Hojas: " + arbolesAvistados[i].getHojas());
                                 System.out.println("Fruto: " + arbolesAvistados[i].getFruto()+"\n");
@@ -505,7 +505,7 @@ public class SimuladorProgramacion {
                                 System.out.println("Arbol: "+ arbolesAvistadosIzq[i].getEspecie());
                                 System.out.println("Color: " + arbolesAvistadosIzq[i].getColor());
                                 System.out.println("Nombre cientifico: " + arbolesAvistadosIzq[i].getTipo());
-                                System.out.println("Habitat:" + arbolesAvistadosIzq[i].getHabitat());
+                                System.out.println("Habitat: " + arbolesAvistadosIzq[i].getHabitat());
                                 System.out.println("Tamaño aproximado: " + arbolesAvistadosIzq[i].getTamanio() + "m");
                                 System.out.println("Hojas: " + arbolesAvistadosIzq[i].getHojas());
                                 System.out.println("Fruto: " + arbolesAvistadosIzq[i].getFruto()+"\n");
@@ -642,7 +642,7 @@ public class SimuladorProgramacion {
                                 System.out.println("Arbol: " + arbolesAvistadosDer[i].getEspecie());
                                 System.out.println("Color: " + arbolesAvistadosDer[i].getColor());
                                 System.out.println("Nombre cientifico: " + arbolesAvistadosDer[i].getTipo());
-                                System.out.println("Habitat:" + arbolesAvistadosDer[i].getHabitat());
+                                System.out.println("Habitat: " + arbolesAvistadosDer[i].getHabitat());
                                 System.out.println("Tamaño aproximado: " + arbolesAvistadosDer[i].getTamanio() + "m");
                                 System.out.println("Hojas: " + arbolesAvistadosDer[i].getHojas());
                                 System.out.println("Fruto: " + arbolesAvistadosDer[i].getFruto()+"\n");
